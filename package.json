@@ -1,0 +1,21 @@
+{
+  "name": "writing-sass",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./public/css/style.css",
+    "prefix":"postcss ./public/css/style.css --use autoprefixer -d ./public/css/prefixed/"
+  },
+  "browserslist":"last 4 versions",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gerkx/maintainable-css-with-sass.git"
+  },
+  "author": "Louma",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gerkx/maintainable-css-with-sass/issues"
+  },
+  "homepage": "https://github.com/gerkx/maintainable-css-with-sass#readme"
+}
