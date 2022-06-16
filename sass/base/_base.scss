@@ -1,17 +1,19 @@
-// *,
-// *::after,
-// *::before {
-//     margin: 0;
-//     padding: 0;
-//     box-sizing: inherit;
-// }
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    line-height: 1;
+}
 
-// html {
-//     // 10px div by def of 16px
-//     font-size: 62.5%;
-// }
+html {
+    // 10px div by def of 16px (taille par defaut)
+    font-size: 100%;
+}
 
-// body {
-//     box-sizing: border-box;
-//     background: $colour-secondary;
-// }
+body{
+    box-sizing:border-box;
+    //     background: $colour-secondary;
+}
+
