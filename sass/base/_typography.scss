@@ -1,37 +1,44 @@
 body {
     font-family: 'Roboto', sans-serif;
-    color: $colour-black;
-    font-size: 1rem;
-    // font-weight: 100;
-    line-height: 1.7;
+    color: $colour-black;  
+    // line-height: 1.7;
+    text-decoration: none;
 }
 
-.header__logo{
+.logo{
     font-family: 'Shrikhand', cursive;
     font-weight: 900;
-    font-size: 2.25rem;
-    font-style: normal;
 }
 
-.localisation__title{
-    font-size: 1.875rem;
+strong{
     font-weight: 900;
-    display:flex;
-    padding:0;
-    justify-content: center;
-    border: 1px solid black;
 }
 
-h2.localisation__subtitle{
-    font-size: 1.5rem;
-    font-weight: 100;
-    display:flex;
-    margin:20px;
-    padding:0;
-    justify-content: center;
-    border: 1px solid red;
+a{
+    text-decoration: none;
+    color: $colour-black;
+   
 }
 
+h2,h3{
+    font-size: 1.875rem;
+}
+
+// h4,p{
+//     font-size: 1.25rem;
+// }
+
+input,h4,p,{
+    font-size:1.25rem;
+}
+
+*{
+    filter: blur(0.35px); //Effet flouté par défaut sur tous les objets
+}
+    
+ul{
+    list-style-type: none;
+}
 // textarea {
 //     font-family: 'Roboto', sans-serif;
 //     font-weight: 100;

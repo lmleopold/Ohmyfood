@@ -1,5 +1,32 @@
-@mixin box-shadow($colour:lightness-shift($colour-primary), $offset: $container-shadow-size){
-    box-shadow:$offset $offset $offset $colour;
+@mixin box-shadow($colour:lightness-shift($colour-primary), $offset: $box-shadow-size){
+    box-shadow:0 $offset $offset lightness-shift($colour);
+}
+
+@mixin text-shadow($colour:lightness-shift($colour-primary), $offset: $text-shadow-size){
+    text-shadow: 0px 0px $offset lightness-shift($colour);
+}
+
+@mixin button {
+    padding: 22px 30px;
+    color: $colour-white;
+    background: linear-gradient(to bottom right, $colour-secondary, $colour-primary);
+    cursor: pointer;
+    width:fit-content;
+    display:flex;
+    justify-content: center;
+    text-align: center;
+    border-radius: 32px;
+    font-size: 1.2rem;
+    font-weight: 900;
+    @include box-shadow($colour-darkgrey);
+    // &:hover{
+    //     background: $colour-primary;
+    //     color: $colour-accent;
+    // }
+    // &--full-width {
+    //     width: 100%;
+    //     margin: 0 auto;
+    // }
 }
 
 // @mixin border($colour:$colour-primary) {
@@ -21,18 +48,3 @@
 //         }
 // }
 
-// @mixin btn {
-//     padding: $grid-gutter;
-//     @include border;
-//     color: $colour-primary;
-//     background: $colour-secondary;
-//     cursor: pointer;
-//     &:hover{
-//         background: $colour-primary;
-//         color: $colour-accent;
-//     }
-//     &--full-width {
-//         width: 100%;
-//         margin: 0 auto;
-//     }
-// }

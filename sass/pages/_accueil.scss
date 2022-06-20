@@ -1,3 +1,17 @@
+.fonctionnement{
+    border: orange 2px solid;
+    padding:70px $layout-padding-side 90px $layout-padding-side;
+    &__title{
+        padding-bottom: $layout-spacer;
+    }
+}
+    
+
+
+
+
+
+
 // .about {
 //     width: 100%;
 //     display: grid;

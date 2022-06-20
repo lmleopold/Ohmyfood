@@ -1,11 +1,16 @@
 .header {
-    background: $colour-white;
-    height: 5.2rem;
-    border:1px red solid;
+    z-index:1;
+    position:relative;
+    background-color:$colour-white;
+    height: 83px;
+    // border:1px red solid;
     display: flex;
     align-items: flex-end;
     justify-content: center;
-    padding-bottom: 0.88rem;
-    @include box-shadow(lightness-shift($colour-darkgrey));
-    z-index:1;
+    padding-bottom: 14px;
+    box-shadow: 0 5px 5px darken($colour-darkgrey,10%);
+    &__logo{
+        font-size: 2.25rem;
+        filter: blur(0.6px);
+    }
 }
