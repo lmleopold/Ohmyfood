@@ -11,8 +11,7 @@
             @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap');
         </style> 
         <!--Lien vers la librairie Fontawesome pour avoir les icones-->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" 
-        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://kit.fontawesome.com/38d53822e9.js" crossorigin="anonymous"></script>
         <!-- lien vers la page de style CSS-->
         <link rel="stylesheet" href="./public/css/style.css" />
     </head>
@@ -38,22 +37,22 @@
                 <a class="localisation__button button">Explorez nos restaurants</a>
             </section>
             <!-- fonctionnement -->
-            <section class="fonctionnement">
-                <h3 class="fonctionnement__title">Fonctionnement</h3>
-                <ul class="fonctionnement__container">
-                    <li class="fonctionnement__container__puce">
-                        <p>1</p>
-                        <i class="fa-solid fa-mobile-screen"></i>
+            <section class="fonct">
+                <h3 class="fonct__title">Fonctionnement</h3>
+                <ul class="fonct__box">
+                    <li class="fonct__box__puce">
+                        <p class="fonct__box__puce__num">1</p>
+                        <i class="fonct__box__puce__i fa-solid fa-mobile-screen"></i>
                         <h4>Choisissez un restaurant</h4>
                     </li>
-                    <li class="fonctionnement__container__puce">
-                        <p>2</p>
-                        <i class="fa-solid fa-list"></i>
+                    <li class="fonct__box__puce">
+                        <p class="fonct__box__puce__num">2</p>
+                        <i class="fonct__box__puce__i fa-solid fa-list"></i>
                         <h4>Composez votre menu</h4>
                     </li>
-                    <li class="fonctionnement__container__puce">
-                        <p>3</p>
-                        <i class="fa-solid fa-store"></i>
+                    <li class="fonct__box__puce">
+                        <p class="fonct__box__puce__num">3</p>
+                        <i class="fonct__box__puce__i fa-solid fa-store"></i>
                         <h4>Dégustez au restaurant</h4>
                     </li>
                 </ul>
@@ -61,27 +60,31 @@
             <!-- Liste des restaurants -->
             <section class="restaurants">
                 <h3 class="restaurants__title">Restaurants</h3>
-                <div class="restaurants__container">
+                <div class="restaurants__box">
                     <a href="./menu1.html" class="menu">
-                        <figure class="menu-card">
-                            <img class="menu-card__img" src="./public/img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Photo du restaurant 'La palette du goût'">
-                            <figcaption>
-                                <p class="menu-card__byline">
+                        <figure class="menu__card">
+                            <div class="menu__card__img a">
+                                <img src="./public/img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Photo du restaurant 'La palette du goût'">
+                            </div>
+                            <figcaption class="menu__card__capt">
+                                <p class="menu__card__capt__byline">
                                     <strong>La palette du goût</strong>
                                     <br/>
                                     Ménilmontant
                                 </p>
-                                <i class="fa-regular fa-heart">
+                                <i class="fa-regular fa-heart"> <!-- l'icone "fa-thin" est payante --> 
                                     <i class="fa-solid fa-heart"></i>
                                 </i>                                                        
                             </figcaption>
                         </figure>
                     </a> 
                     <a href="./menu2.html" class="menu">
-                        <figure class="menu-card">
-                            <img class="menu-card__img" src="./public/img/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="Photo du restaurant 'La note enchantée">
-                            <figcaption>
-                                <p class="menu-card__byline">
+                        <figure class="menu__card">
+                            <div class="menu__card__img b">
+                                <img src="./public/img/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="Photo du restaurant 'La note enchantée">
+                            </div>
+                            <figcaption class="menu__card__capt">
+                                <p class="menu__card__capt__byline">
                                     <strong>La note enchantée</strong>
                                     <br/>
                                     Charonne
@@ -93,10 +96,12 @@
                         </figure>
                     </a>
                     <a href="./menu3.html" class="menu">
-                        <figure class="menu-card">
-                            <img class="menu-card__img" src="./public/img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Photo du restaurant 'A la française'">
-                            <figcaption>
-                                <p class="menu-card__byline">
+                        <figure class="menu__card">
+                            <div class="menu__card__img c">
+                                <img src="./public/img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Photo du restaurant 'A la française'">
+                            </div>
+                            <figcaption class="menu__card__capt">
+                                <p class="menu__card__capt__byline">
                                     <strong>A la française</strong>
                                     <br/>
                                     Cité Rouge
@@ -108,10 +113,12 @@
                         </figure>
                     </a> 
                     <a href="./menu4.html" class="menu">
-                        <figure class="menu-card">
-                            <img class="menu-card__img" src="./public/img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Photo du restaurant 'Le délice des sens'">
-                            <figcaption>
-                                <p class="menu-card__byline">
+                        <figure class="menu__card">
+                            <div class="menu__card__img d">
+                                <img src="./public/img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Photo du restaurant 'Le délice des sens'">
+                            </div>
+                            <figcaption class="menu__card__capt">
+                                <p class="menu__card__capt__byline">
                                     <strong>Le délice des sens</strong>
                                     <br/>
                                     Folie-Méricourt
@@ -127,7 +134,7 @@
         </main>
         <!-- Footer -->
         <footer class="footer">
-            <h2 class="footer__logo">ohmyfood</h1>
+            <h2 class="footer__logo logo">ohmyfood</h1>
             <ul class="footer__list">
                 <li>
                     <a href="#">

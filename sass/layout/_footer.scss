@@ -1,0 +1,11 @@
+.footer{
+    background-color: lighten($colour-black,20%);
+    
+    *{color: $colour-white;}
+    display: flex;
+    flex-direction: column;
+    &__logo{
+    
+    };
+        
+}

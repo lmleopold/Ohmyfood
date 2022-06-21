@@ -17,3 +17,11 @@ body{
     //     background: $colour-secondary;
 }
 
+
+*{
+    filter: blur(0.4px);
+    // background-color: yellow; //Effet flouté par défaut sur tous les objets
+}
+h2,h3{
+    filter: blur(0.7px);
+}

@@ -28,12 +28,13 @@ h2,h3{
 //     font-size: 1.25rem;
 // }
 
-input,h4,p,{
+input,h4{
     font-size:1.25rem;
 }
 
-*{
-    filter: blur(0.35px); //Effet flouté par défaut sur tous les objets
+p{
+    font-size: 1.5rem;
+    line-height: 125%;
 }
     
 ul{
