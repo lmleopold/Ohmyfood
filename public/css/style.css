@@ -532,6 +532,7 @@ ul {
 }
 .restaurants__title {
   padding-bottom: 30px;
+  display: flex;
 }
 .restaurants__box {
   display: flex;
@@ -545,39 +546,41 @@ ul {
 .menu__card {
   width: 100%;
   display: flex;
-  flex-direction: column;
+  max-height: 335px;
   height: 335px;
+  flex-direction: column;
 }
 .menu__card__img {
   width: 100%;
   height: 235px;
+  min-height: 235px;
   position: relative;
   overflow: hidden;
   display: flex;
   border-radius: 30px 30px 0 0;
 }
-.menu__card__img.a img {
-  width: 101%;
-  position: absolute;
-  top: -60px;
+.menu__card__img img {
+  object-fit: cover;
+  min-width: 100%;
 }
-.menu__card__img.b img {
-  width: 100%;
+.menu__card__img.a::before, .menu__card__img.b::before {
+  z-index: 1;
+  content: "Nouveau";
+  font-size: 1rem;
+  font-weight: 900;
+  padding: 10px 15px;
+  border-radius: 3px;
+  color: #008766;
+  background: #99e2d0;
+  display: block;
   position: absolute;
-  top: -190px;
-}
-.menu__card__img.c img {
-  width: 110%;
-  position: absolute;
-  top: -70px;
-}
-.menu__card__img.d img {
-  width: 105%;
-  position: absolute;
-  top: -70px;
+  top: 20px;
+  right: 20px;
+  filter: none;
 }
 .menu__card__capt {
   display: flex;
+  max-width: 100%;
   justify-content: space-between;
   background-color: #fff;
   padding-left: 16px;

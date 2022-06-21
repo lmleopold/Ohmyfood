@@ -29,6 +29,23 @@
     // }
 }
 
+@mixin nouveau{
+    &::before{
+        z-index: 1;
+        content: "Nouveau";
+        font-size: 1rem;
+        font-weight: 900;
+        padding:10px 15px;
+        border-radius: 3px;
+        color: $colour-darkgreen;
+        background:$colour-lightgreen;
+        display: block;
+        position: absolute;
+        top:20px;
+        right:20px;
+        filter: none;
+    }
+}
 // @mixin border($colour:$colour-primary) {
 //     border: .1rem solid $colour;
 // }
