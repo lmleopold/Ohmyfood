@@ -2,15 +2,21 @@
     z-index:1;
     position:relative;
     background-color:$colour-white;
-    height: 83px;
-    // border:1px red solid;
+    height: 62px;
+    // border:1px blue solid;
     display: flex;
     align-items: flex-end;
     justify-content: center;
-    padding-bottom: 14px;
+    padding-bottom: 10px;
     box-shadow: 0 5px 5px darken($colour-darkgrey,10%);
     &__logo{
         font-size: 2.25rem;
-        filter: blur(0.6px);
+        
+    }
+    &.header--menu{
+        justify-content:space-between;
+        border:1px red solid;
+
     }
 }
+

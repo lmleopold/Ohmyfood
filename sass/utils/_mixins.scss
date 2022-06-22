@@ -7,7 +7,7 @@
 }
 
 @mixin button {
-    padding: 22px 30px;
+    padding: 17px 23px;
     color: $colour-white;
     background: linear-gradient(to bottom right, $colour-secondary, $colour-primary);
     cursor: pointer;
@@ -15,7 +15,7 @@
     display:flex;
     justify-content: center;
     text-align: center;
-    border-radius: 32px;
+    border-radius: 24px;
     font-size: 1.2rem;
     font-weight: 900;
     @include box-shadow($colour-darkgrey);
@@ -35,15 +35,21 @@
         content: "Nouveau";
         font-size: 1rem;
         font-weight: 900;
-        padding:10px 15px;
+        padding:8px 11px;
         border-radius: 3px;
         color: $colour-darkgreen;
         background:$colour-lightgreen;
         display: block;
         position: absolute;
-        top:20px;
-        right:20px;
-        filter: none;
+        top:15px;
+        right:15px;
+        filter: blur(0.5px);
+    }
+}
+
+@mixin desktop-only {
+    @media all and (min-width>$breakpoint-desktop){
+        @content;
     }
 }
 // @mixin border($colour:$colour-primary) {
