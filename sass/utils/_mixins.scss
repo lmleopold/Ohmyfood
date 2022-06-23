@@ -49,6 +49,11 @@
         @content;
     }
 }
+@mixin arrow_under250px {
+    @media all and(max-width:250px){
+        @content;
+    }
+}
 // @mixin border($colour:$colour-primary) {
 //     border: .1rem solid $colour;
 // }
