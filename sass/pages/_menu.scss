@@ -1,42 +1,44 @@
-// .project {
-//     width: 100%;
-//     margin-bottom: $grid-gutter*1.2;
-//     display: grid;
-//     grid-template-columns: 5fr 3fr;
-//     grid-template-rows: repeat(3, auto);
-//     grid-gap: $grid-gutter;
-//     grid-template-areas: 
-//         "image synopsis"
-//         "tags synopsis"
-//         "btn btn";
-//     &__image {
-//         grid-area: image;
-//         @include img-ratio;
-//     }
-//     &__synopsis {
-//         grid-area: synopsis;
-//         padding-left: $grid-gutter;
-//         & h1 {
-//             color: $colour-white;
-//             @include heading-shadow;
-//         }
-//         & p {
-//             line-height: 2rem*1.25;
-//         }
-//     }
-//     &__tags {
-//         grid-area: tags;
-//         & p {
-//             color: $colour-white;
-//             & strong {
-//                 color: $colour-primary;
-//                 font-weight: 900;
-//                 font-style: italic;
-//             }
-//         }
-//     }
-//     &__btn {
-//         @include btn;
-//         grid-area: btn;
-//     }
-// }
+.banniere{
+    height: 257px;
+    overflow: hidden;
+    z-index: 1;
+    display:flex;
+    &__img{
+        max-width: 100%;
+        flex:1;
+        object-fit: cover;
+    }
+}
+.carte{
+    background-color: $colour-lightgrey;
+    display:flex;
+    flex-direction: column;
+    padding: 0 $layout-padding-side;
+    border-radius: 15px;
+    margin-top:-33px;
+    z-index: 1;
+    &__title{
+        padding:33px 0;
+        // border: red 2px solid;
+        span{
+            text-transform:capitalize;
+        }
+    }
+}
+.entrees{
+    display: flex;
+    flex-direction: column;
+    // border: green 2px solid;
+    &__title{
+        padding-bottom: $menu-underline-spacer-top;
+        
+    }
+    &__line{
+        margin-bottom: $menu-underline-spacer-bottom;
+        width: 40px;
+        border:2px solid $colour-lightgreen
+    }
+    &__detail{
+        @include box-shadow($colour-white);
+    }
+}

@@ -317,14 +317,10 @@ html {
 
 body {
   box-sizing: border-box;
-}
-
-* {
-  filter: blur(0.3px);
-}
-
-h2, h3 {
-  filter: blur(0.5px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
 }
 
 body {
@@ -333,10 +329,9 @@ body {
   text-decoration: none;
 }
 
-.logo {
+.shrikhand {
   font-family: "Shrikhand", cursive;
   font-weight: 100;
-  filter: blur(0.45px);
 }
 
 strong {
@@ -370,10 +365,7 @@ ul {
   color: #fff;
   background: linear-gradient(to bottom right, #FF79DA, #9356DC);
   cursor: pointer;
-  width: fit-content;
   display: flex;
-  justify-content: center;
-  text-align: center;
   border-radius: 24px;
   font-size: 1.2rem;
   font-weight: 900;
@@ -384,37 +376,43 @@ ul {
   z-index: 1;
   position: relative;
   background-color: #fff;
-  height: 62px;
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  padding-bottom: 10px;
-  box-shadow: 0 5px 5px #d1d1d1;
+  box-shadow: 0 3px 3px #d1d1d1;
 }
 .header__logo {
-  font-size: 2.25rem;
+  font-size: 2.33rem;
+  padding-top: 20px;
+  padding-bottom: 10px;
 }
-.header.header--menu {
-  justify-content: space-between;
-  border: 1px red solid;
+.header--menu__logo {
+  background-color: 2px yellow solid;
+  flex: 9;
+  text-align: center;
+  margin-left: -80px;
+}
+.header--menu i {
+  text-align: center;
+  flex: 1;
+  max-width: 80px;
 }
 
 .localisation {
   background-color: #f6f6f6;
   z-index: -1;
-  box-shadow: none;
-  height: 338px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 56px;
 }
 .localisation__detail {
   background-color: #eaeaea;
-  height: 48px;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: flex-end;
+  padding-top: 13px;
   padding-bottom: 15px;
 }
 .localisation__punaise {
@@ -423,7 +421,8 @@ ul {
   color: #262626;
 }
 .localisation__name {
-  color: #262626;
+  color: black;
+  font-weight: 500;
   background-color: inherit;
   border: none;
   box-shadow: none;
@@ -442,8 +441,6 @@ ul {
   display: flex;
   padding: 19px 0 30px 0;
   display: flex;
-  justify-content: center;
-  align-items: baseline;
   text-align: center;
   font-weight: 100;
   filter: none;
@@ -451,14 +448,13 @@ ul {
 
 .footer {
   background-color: #333333;
-  padding: 0 19px;
-  height: 195px;
+  padding: 0 19px 40px 19px;
+  flex: 1;
   display: flex;
   flex-direction: column;
 }
 .footer * {
   color: #fff;
-  filter: blur(0.3px);
 }
 .footer h4 {
   font-weight: 100;
@@ -503,12 +499,12 @@ ul {
   background-color: #f6f6f6;
   display: flex;
   gap: 23px;
-  height: 75px;
+  padding-top: 27px;
+  padding-bottom: 23px;
   border-radius: 19px;
   margin-left: 12px;
   align-items: center;
   box-shadow: 0 7.5px 7.5px #e6e6e6;
-  filter: blur(0.45px);
 }
 .fonct__box__puce__num {
   background-color: #9356DC;
@@ -547,10 +543,7 @@ ul {
   display: flex;
 }
 .menu__card {
-  width: 100%;
   display: flex;
-  max-height: 251px;
-  height: 251px;
   flex-direction: column;
 }
 .menu__card__img {
@@ -587,12 +580,11 @@ ul {
   max-width: 100%;
   justify-content: space-between;
   background-color: #fff;
-  padding-left: 12px;
+  padding: 15px 12px;
   flex: 1;
   align-items: center;
   border-radius: 0 0 23px 23px;
   color: #4d4d4d;
-  filter: none;
   box-shadow: 0 6px 6px #e6e6e6;
 }
 .menu__card__capt strong {
@@ -601,12 +593,56 @@ ul {
 .menu__card__capt i {
   font-size: 1.875rem;
   position: relative;
-  padding-right: 26px;
+  padding-right: 18px;
 }
 .menu__card__capt i > i {
   position: absolute;
   top: 0;
   left: 0;
+}
+
+.banniere {
+  height: 257px;
+  overflow: hidden;
+  z-index: 1;
+  display: flex;
+}
+.banniere__img {
+  max-width: 100%;
+  flex: 1;
+  object-fit: cover;
+}
+
+.carte {
+  background-color: #f6f6f6;
+  display: flex;
+  flex-direction: column;
+  padding: 0 19px;
+  border-radius: 15px;
+  margin-top: -33px;
+  z-index: 1;
+}
+.carte__title {
+  padding: 33px 0;
+}
+.carte__title span {
+  text-transform: capitalize;
+}
+
+.entrees {
+  display: flex;
+  flex-direction: column;
+}
+.entrees__title {
+  padding-bottom: 10px;
+}
+.entrees__line {
+  margin-bottom: 16px;
+  width: 40px;
+  border: 2px solid #99e2d0;
+}
+.entrees__detail {
+  box-shadow: 0 6px 6px #e6e6e6;
 }
 
 /*# sourceMappingURL=style.css.map */

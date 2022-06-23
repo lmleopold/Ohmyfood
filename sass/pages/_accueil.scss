@@ -14,12 +14,12 @@
             background-color: $colour-lightgrey;
             display: flex;
             gap: 23px;
-            height: 75px;
+            padding-top: 27px;
+            padding-bottom: 23px;
             border-radius: 19px;
             margin-left:12px;
             align-items: center;
             @include box-shadow($colour-white,7.5px);
-            filter: blur(0.45px);
             &__num{
                 background-color: $colour-primary;
                 color: $colour-white;
@@ -59,14 +59,10 @@
     
 .menu{
     display:flex;
-    // max-height: 251px;
     // border: 2px green solid;
     &__card{
         // border:2px red solid;
-        width: 100%;
         display: flex;
-        max-height: 251px;
-        height: 251px;
         flex-direction: column;        
         &__img{
             width: 100%;
@@ -77,61 +73,26 @@
             display: flex;
             border-radius: 23px 23px 0 0;
             // border:blue 3px solid;
-        //     &.a{
-        //         @include nouveau;
-        //         img{
-        //             width: 110%;
-        //             position: absolute;
-        //             top: -60px;
-        //         }
-        //     }
-        //     &.b{
-        //         img{
-        //             width: 100%;
-        //             position: absolute;
-        //             top: -140px;
-        //         } 
-        //     }
-        //     &.c{
-        //         img{
-        //             width:112%;
-        //             position: absolute;
-        //             top: -70px;                    
-        //         }
-        //     }
-        //     &.d{
-        //         img{
-        //             width: 110%;
-        //             position: absolute;
-        //             top: -70px;
-        //         } 
-        //     }
-        //     @include desktop-only{
                 img{
                 object-fit:cover;
                 width: 100%;
-                // position:absolute;
-                // top:-60px;
                 min-width: 100%;
                 }
                 &.a,&.b{
                     @include nouveau;
                 }
-            // }
-        }
-        
+        }        
         &__capt{
             // border: purple 2px solid;
             display: flex;
             max-width: 100%;
             justify-content: space-between;
             background-color: $colour-white;
-            padding-left: 12px;
+            padding: 15px 12px;
             flex:1;
             align-items: center;
             border-radius: 0 0 23px 23px;
             color: lighten($color: $colour-black, $amount: 30%);
-            filter: none;
             @include box-shadow($colour-white);
             strong{
                 color: $colour-black;
@@ -139,7 +100,7 @@
             i{
                 font-size: 1.875rem;
                 position: relative;
-                padding-right: 26px;
+                padding-right: 18px;
                 >i{
                     position: absolute;
                     top:0;
