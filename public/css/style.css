@@ -352,7 +352,7 @@ input, h4 {
 }
 
 p {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   line-height: 125%;
 }
 
@@ -362,14 +362,19 @@ ul {
 
 .button {
   padding: 17px 23px;
+  width: fit-content;
   color: #fff;
   background: linear-gradient(to bottom right, #FF79DA, #9356DC);
   cursor: pointer;
-  display: flex;
   border-radius: 24px;
   font-size: 1.2rem;
   font-weight: 900;
   box-shadow: 0 6px 6px #d1d1d1;
+}
+.button--menu {
+  padding-left: 50px;
+  padding-right: 50px;
+  margin: 17px auto 0 auto;
 }
 
 .header {
@@ -382,7 +387,7 @@ ul {
   box-shadow: 0 3px 3px #d1d1d1;
 }
 .header__logo {
-  font-size: 2.33rem;
+  font-size: 2.5rem;
   padding-top: 20px;
   padding-bottom: 10px;
   margin: auto;
@@ -636,32 +641,58 @@ ul {
   background-color: #f6f6f6;
   display: flex;
   flex-direction: column;
-  padding: 0 19px;
-  border-radius: 15px;
+  padding: 0 19px 80px 19px;
+  border-radius: 30px;
   margin-top: -33px;
   z-index: 1;
 }
 .carte__title {
+  display: flex;
+  justify-content: space-between;
   padding: 33px 0;
+  font-size: 2.5rem;
 }
 .carte__title span {
   text-transform: capitalize;
 }
+.carte__title__i {
+  font-size: 1.875rem;
+  padding-right: 21px;
+}
 
-.entrees {
+.entrees, .plats, .desserts {
   display: flex;
   flex-direction: column;
+  gap: 12px;
+  margin-bottom: 33px;
 }
-.entrees__title {
+.entrees__title, .plats__title, .desserts__title {
   padding-bottom: 10px;
+  color: #333333;
+  font-weight: 100;
+  text-transform: uppercase;
+  font-size: 1.3rem;
 }
-.entrees__line {
-  margin-bottom: 16px;
+.entrees__line, .plats__line, .desserts__line {
   width: 40px;
   border: 2px solid #99e2d0;
 }
-.entrees__detail {
+.entrees__name, .plats__name, .desserts__name {
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 15px;
   box-shadow: 0 6px 6px #e6e6e6;
+  display: flex;
+  justify-content: space-between;
+}
+.entrees__name__txt, .plats__name__txt, .desserts__name__txt {
+  font-size: 1.3rem;
+}
+.entrees__name__txt strong, .plats__name__txt strong, .desserts__name__txt strong {
+  font-size: 1.4rem;
+}
+.entrees__name__cost, .plats__name__cost, .desserts__name__cost {
+  display: flex;
 }
 
 /*# sourceMappingURL=style.css.map */

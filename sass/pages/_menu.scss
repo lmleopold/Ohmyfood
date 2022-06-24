@@ -13,32 +13,58 @@
     background-color: $colour-lightgrey;
     display:flex;
     flex-direction: column;
-    padding: 0 $layout-padding-side;
-    border-radius: 15px;
-    margin-top:-33px;
+    padding: 0 $layout-padding-side 80px $layout-padding-side;
+    border-radius: 30px;
+    margin-top:-$menu-rubrique-spacer;
     z-index: 1;
     &__title{
-        padding:33px 0;
+        display: flex;
+        justify-content:space-between;
+        padding:$menu-rubrique-spacer 0;
+        font-size: 2.5rem;
         // border: red 2px solid;
         span{
             text-transform:capitalize;
         }
+        &__i{
+            font-size: 1.875rem;
+            padding-right: 21px;
+        }
     }
 }
-.entrees{
+.entrees,.plats,.desserts{
     display: flex;
     flex-direction: column;
+    gap:$menu-plat-spacer;
+    margin-bottom: $menu-rubrique-spacer;
     // border: green 2px solid;
     &__title{
         padding-bottom: $menu-underline-spacer-top;
-        
+        color:lighten($colour-black, $amount: 20%);
+        font-weight: 100;
+        text-transform: uppercase;
+        font-size: 1.3rem;
     }
     &__line{
-        margin-bottom: $menu-underline-spacer-bottom;
         width: 40px;
         border:2px solid $colour-lightgreen
     }
-    &__detail{
+    &__name{
+        background-color: $colour-white;
+        padding: 10px;
+        border-radius: 15px;
         @include box-shadow($colour-white);
+        display: flex;
+        justify-content: space-between;
+        &__txt{
+            font-size: 1.3rem;
+            strong{
+                font-size: 1.4rem;
+            }
+        }
+        &__cost{
+            // background-color: green;
+            display: flex;
+        }
     }
 }
