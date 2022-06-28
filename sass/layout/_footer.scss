@@ -1,10 +1,8 @@
 .footer{
     background-color: lighten($colour-black,20%);
-    padding: 0 $layout-padding-side 40px $layout-padding-side;
-    flex: 1;
-    // height: 195px;
     display: flex;
     flex-direction: column;
+    flex: 1;
     *{
         color: $colour-white;
     }
@@ -14,7 +12,7 @@
     &__logo{
         padding: 23px 0;
         font-size: 1.5rem;
-    };
+    }
     &__list{
         // border:red 2px solid;
         display: flex;
@@ -33,7 +31,6 @@
                         // border:red 2px solid;
                         margin-left:-2.25px;
                         margin-right: 2.25px;
-                        
                     }
                 }
            }

@@ -5,3 +5,7 @@
         @return darken($colour, 10%);
     }
 }
+
+@function lineargradient($direction){
+    @return linear-gradient($direction, $colour-primary, $colour-secondary);
+}
