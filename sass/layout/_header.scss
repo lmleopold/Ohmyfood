@@ -3,9 +3,10 @@
     background-color:$colour-white;
     max-width: 100%;
     // border:3px blue solid;
+    position:relative;
     display: flex;
     align-items: flex-end;
-    justify-content: center;
+    justify-content: center;    
     box-shadow: 0 3px 3px darken($colour-darkgrey,10%);
     &__logo{
         // border: 4px green solid;
@@ -17,15 +18,15 @@
     }
     &--menu{
         &.header{
-            position:relative;
-            @include arrow_under250px{
-            // background-color: red;
-            flex-direction: column;
+            box-shadow: none;
+            @include arrow_under_breakpoint{
+                // background-color: red;
+                flex-direction: column;
             }
         }
         &__logo{
             // background-color: yellow;
-            @include arrow_under250px{
+            @include arrow_under_breakpoint{
             max-width: 100%;
             word-wrap: break-word;
             text-align: center;
@@ -36,7 +37,7 @@
             position:absolute;            
             top:2rem;
             left:2rem;
-            @include arrow_under250px{
+            @include arrow_under_breakpoint{
                 // background-color: orange;
                 position: static;
                 margin: auto;

@@ -21,10 +21,10 @@
         padding-right:50px;
         margin:17px auto 0 auto;
     }
-    // &:hover{
-    //     background: $colour-primary;
-    //     color: $colour-accent;
-    // }
+    &:hover{
+        background:linear-gradient(to bottom right, lighten($colour-secondary,5%), lighten($colour-primary,5%));
+        @include box-shadow(darken($colour-darkgrey,5%));
+    }
     // &--full-width {
     //     width: 100%;
     //     margin: 0 auto;
@@ -50,12 +50,17 @@
 }
 
 @mixin desktop-only {
-    @media all and (min-width>$breakpoint-desktop){
+    @media all and (min-width:$breakpoint-desktop){
         @content;
     }
 }
-@mixin arrow_under250px {
-    @media all and(max-width:250px){
+@mixin tablette{
+    @media all and (min-width:$breakpoint-tablette){
+        @content;
+    }
+}
+@mixin arrow_under_breakpoint {
+    @media all and(max-width:$breakpoint-arrow){
         @content;
     }
 }

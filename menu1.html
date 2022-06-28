@@ -18,25 +18,28 @@
 
     <body>
         <!-- header -->
-        <header class="header header--menu">
-            <a href="./accueil.html" class="header--menu__link">
-                <i class="fa-solid fa-arrow-left fa-xl header--menu__link__i"></i>
-            </a>
-            <h1 class="header__logo header--menu__logo shrikhand">
-                ohmyfood
-            </h1>           
+        <header class="header header--menu container">
+                <a href="./accueil.html" class="header--menu__link">
+                    <i class="fa-solid fa-arrow-left fa-xl header--menu__link__i"></i>
+                </a>
+                <h1 class="header__logo header--menu__logo shrikhand">
+                    ohmyfood
+                </h1>           
         </header>
     
         <!--banniere-->
-            <div class="banniere">
-                <img class="banniere__img" src="./public/img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Photo d'une table au restaurant 'La palette du goût'">;
+            <div class="banniere container">
+                <img class="banniere__img" src="./public/img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Photo d'une table au restaurant 'La palette du goût'">
             </div>
         <!-- Carte -->
-        <main class="carte"> 
+        <main class="carte container"> 
             
             <section class="carte__title">
                 <h2 class="carte__title__text shrikhand"><span>L</span>a palette du goût</h2>
-                <i class="carte__title__i fa-regular fa-heart"></i>
+                <div>
+                    <i class="fa-solid fa-heart heart-button heart-button--colored"></i>
+                    <i class="fa-regular fa-heart heart-button"></i>
+                </div>
             </section>
 
             <!-- Entrées -->
@@ -165,32 +168,33 @@
 
         <!-- Footer -->
         <footer class="footer">
-            <h2 class="footer__logo shrikhand">ohmyfood</h1>
-            <ul class="footer__list">
-                <li class="footer__list__dot">
-                    <a class="footer__list__dot__a" href="#">
-                        <i class="fa-solid fa-utensils footer__list__dot__a__i"></i>
-                        <h4>Proposer un restaurant</h4>
-                    </a>
-                </li>
-                <li class="footer__list__dot">
-                    <a class="footer__list__dot__a" href="#">
-                        <i class="fa-solid fa-handshake-angle footer__list__dot__a__i"></i>
-                        <h4>Devenir partenaire</h4>
-                    </a>
-                </li>
-                <li class="footer__list__dot">
-                    <a class="footer__list__dot__a" href="#">
-                        <h4>Mentions légales</h4>
-                    </a>
-                </li>
-                <li class="footer__list__dot">
-                    <a class="footer__list__dot__a" href="#">
-                        <h4>Contact</h4>
-                    </a>
-                </li>
-            </ul>
+            <div class="container container--footer">
+                <h2 class="footer__logo shrikhand">ohmyfood</h1>
+                <ul class="footer__list">
+                    <li class="footer__list__dot">
+                        <a class="footer__list__dot__a" href="#">
+                            <i class="fa-solid fa-utensils footer__list__dot__a__i"></i>
+                            <h4>Proposer un restaurant</h4>
+                        </a>
+                    </li>
+                    <li class="footer__list__dot">
+                        <a class="footer__list__dot__a" href="#">
+                            <i class="fa-solid fa-handshake-angle footer__list__dot__a__i"></i>
+                            <h4>Devenir partenaire</h4>
+                        </a>
+                    </li>
+                    <li class="footer__list__dot">
+                        <a class="footer__list__dot__a" href="#">
+                            <h4>Mentions légales</h4>
+                        </a>
+                    </li>
+                    <li class="footer__list__dot">
+                        <a class="footer__list__dot__a" href="mailto:louismarie.leopold@gmail.com">
+                            <h4>Contact</h4>
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </footer>
     </body>
-
 </html>
