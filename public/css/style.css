@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -407,9 +408,9 @@ ul {
 .spinnerwrapper {
   overflow: hidden;
   z-index: 2;
-  height: 200vh;
+  height: 100vh;
   background-color: #fff;
-  animation: hidespinner 0s ease-in-out 1s forwards;
+  animation: hidespinner 0s ease-in-out 3s forwards;
 }
 
 .loadingspinner {
@@ -557,7 +558,6 @@ ul {
 @media all and (max-width: 250px) {
   .header--menu__link {
     position: static;
-    margin: auto;
     margin: auto;
     padding-top: 2rem;
   }
@@ -781,7 +781,6 @@ ul {
   position: absolute;
   top: 15px;
   right: 15px;
-  filter: blur(0.5px);
 }
 .menu__card__capt {
   display: flex;
@@ -857,22 +856,53 @@ ul {
 }
 .entrees__name, .plats__name, .desserts__name {
   background-color: #fff;
-  padding: 10px;
   border-radius: 15px;
   box-shadow: 0 6px 6px #e6e6e6;
   display: flex;
   justify-content: space-between;
   margin-left: -9px;
   margin-right: -9px;
+  z-index: 1;
 }
 .entrees__name__txt, .plats__name__txt, .desserts__name__txt {
   font-size: 1.3rem;
+  padding: 10px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 .entrees__name__txt strong, .plats__name__txt strong, .desserts__name__txt strong {
   font-size: 1.4rem;
 }
 .entrees__name__cost, .plats__name__cost, .desserts__name__cost {
   display: flex;
+}
+.entrees__name__cost__p, .plats__name__cost__p, .desserts__name__cost__p {
+  padding-right: 20px;
+  padding-bottom: 10px;
+  display: flex;
+  align-items: flex-end;
+}
+.entrees__name__cost__p::before, .plats__name__cost__p::before, .desserts__name__cost__p::before {
+  content: "...";
+  padding-right: 20px;
+  display: none;
+}
+.entrees__name__cost__p::after, .plats__name__cost__p::after, .desserts__name__cost__p::after {
+  content: "€";
+  padding-bottom: 1px;
+}
+.entrees__name__cost__i, .plats__name__cost__i, .desserts__name__cost__i {
+  background-color: #99e2d0;
+  font-size: 1.67rem;
+  display: flex;
+  flex: 1;
+  align-items: center;
+  padding-left: 18px;
+  padding-right: 18px;
+  border-radius: 0 14px 14px 0;
+  z-index: 0;
+  color: #fff;
 }
 
 /*# sourceMappingURL=style.css.map */

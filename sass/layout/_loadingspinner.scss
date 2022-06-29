@@ -1,9 +1,9 @@
 .spinnerwrapper{
     overflow: hidden;
     z-index: 2;
-    height: 200vh;
+    height: 100vh;
     background-color: $colour-white;
-    animation:hidespinner 0s ease-in-out 1s forwards;
+    animation:hidespinner 0s ease-in-out 3s forwards;
 }
 .loadingspinner {
     // border: red 2px solid;
