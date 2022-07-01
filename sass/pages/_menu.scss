@@ -40,7 +40,7 @@
     flex-direction: column;
     gap:$menu-plat-spacer;
     margin-bottom: $menu-rubrique-spacer;
-    border: green 2px solid;
+    // border: green 2px solid;
     &__title{
         padding-bottom: $menu-underline-spacer-top;
         color:lighten($colour-black, $amount: 20%);
@@ -53,7 +53,7 @@
         border:2px solid $colour-lightgreen
     }
     &__name{
-        border: 1px solid orange;
+        // border: 1px solid orange;
         background-color: $colour-white;
         border-radius: 15px;
         @include box-shadow($colour-white);
@@ -63,27 +63,41 @@
         margin-right: -9px;
         z-index: 1;
         cursor: url(../../public/img/cursor/hand-pointer-regular.png), pointer;
+        overflow: hidden;
+        
         &__txt{
-            border:1px solid red;
+            // border:3px solid red;
             font-size: 1.3rem;
             padding:10px;
+            padding-right: 50px;
             text-overflow: ellipsis;//affiche les 3 points de suspension
             white-space: nowrap;//empeche le passage à la ligne
             overflow:hidden;//masque le texte en dépassement
+            z-index:1;
             strong{
                 font-size: 1.4rem;
             }
+            width:100%;
+            &:hover + .entrees{
+                @include selection-plat;
+            }
+            &:hover + .plats{
+                @include selection-plat;
+            }
+            &:hover + .desserts{
+                @include selection-plat;
+            }
+            
         }
         &__cost{
-            border: 2px solid green;
+            // border: 2px solid green;
             display: flex;
+            width:48px;
+            transition:all 0.5s linear;
+            margin-left:-48px;
+            z-index: 0;
             &__p{
                 // border: 1px black solid;
-                &::before{
-                    content:"...";
-                    padding-right: 20px;
-                    display: none;
-                }
                 &::after{
                     content: "€";
                     // border:1px black solid;
@@ -104,7 +118,7 @@
                 padding-left:18px;
                 padding-right:18px;
                 border-radius: 0 14px 14px 0;
-                z-index: 0;
+                // z-index: 0;
                 color: $colour-white;
             }
         }
