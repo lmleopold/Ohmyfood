@@ -842,6 +842,7 @@ ul {
   flex-direction: column;
   gap: 12px;
   margin-bottom: 33px;
+  border: green 2px solid;
 }
 .entrees__title, .plats__title, .desserts__title {
   padding-bottom: 10px;
@@ -855,6 +856,7 @@ ul {
   border: 2px solid #99e2d0;
 }
 .entrees__name, .plats__name, .desserts__name {
+  border: 1px solid orange;
   background-color: #fff;
   border-radius: 15px;
   box-shadow: 0 6px 6px #e6e6e6;
@@ -863,8 +865,10 @@ ul {
   margin-left: -9px;
   margin-right: -9px;
   z-index: 1;
+  cursor: url(../../public/img/cursor/hand-pointer-regular.png), pointer;
 }
 .entrees__name__txt, .plats__name__txt, .desserts__name__txt {
+  border: 1px solid red;
   font-size: 1.3rem;
   padding: 10px;
   text-overflow: ellipsis;
@@ -875,6 +879,7 @@ ul {
   font-size: 1.4rem;
 }
 .entrees__name__cost, .plats__name__cost, .desserts__name__cost {
+  border: 2px solid green;
   display: flex;
 }
 .entrees__name__cost__p, .plats__name__cost__p, .desserts__name__cost__p {

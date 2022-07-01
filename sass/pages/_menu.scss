@@ -40,7 +40,7 @@
     flex-direction: column;
     gap:$menu-plat-spacer;
     margin-bottom: $menu-rubrique-spacer;
-    // border: green 2px solid;
+    border: green 2px solid;
     &__title{
         padding-bottom: $menu-underline-spacer-top;
         color:lighten($colour-black, $amount: 20%);
@@ -53,7 +53,7 @@
         border:2px solid $colour-lightgreen
     }
     &__name{
-        // border: 1px solid orange;
+        border: 1px solid orange;
         background-color: $colour-white;
         border-radius: 15px;
         @include box-shadow($colour-white);
@@ -62,8 +62,9 @@
         margin-left: -9px;
         margin-right: -9px;
         z-index: 1;
+        cursor: url(../../public/img/cursor/hand-pointer-regular.png), pointer;
         &__txt{
-            // border:1px solid red;
+            border:1px solid red;
             font-size: 1.3rem;
             padding:10px;
             text-overflow: ellipsis;//affiche les 3 points de suspension
@@ -74,7 +75,7 @@
             }
         }
         &__cost{
-            // background-color: green;
+            border: 2px solid green;
             display: flex;
             &__p{
                 // border: 1px black solid;
@@ -105,7 +106,6 @@
                 border-radius: 0 14px 14px 0;
                 z-index: 0;
                 color: $colour-white;
-
             }
         }
     }
