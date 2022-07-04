@@ -25,10 +25,6 @@
         background:linear-gradient(to bottom right, lighten($colour-secondary,5%), lighten($colour-primary,5%));
         @include box-shadow(darken($colour-darkgrey,5%));
     }
-    // &--full-width {
-    //     width: 100%;
-    //     margin: 0 auto;
-    // }
 }
 
 @mixin nouveau{
@@ -45,7 +41,6 @@
         position: absolute;
         top:15px;
         right:15px;
-        filter: blur(0.5px);
     }
 }
 
@@ -64,22 +59,14 @@
         @content;
     }
 }
-// @mixin border($colour:$colour-primary) {
-//     border: .1rem solid $colour;
-// }
-
-// @mixin img-ratio {
-//     width: 100%;
-//         display: block;
-//         overflow: hidden;
-//         padding-top: 56.25%;
-//         position: relative;
-//         & img {
-//             position: absolute;
-//             top: 50%;
-//             left: 50%;
-//             width: 100%;
-//             transform: translate(-50%, -50%);
-//         }
-// }
-
+@mixin rotate {
+    &__detail__i{
+        transform:rotate(1turn);
+        right:17px;
+    }
+}
+@mixin font{
+    &__detail__font{
+        width:60px;
+    }
+}
