@@ -690,6 +690,10 @@ ul {
   align-items: center;
   box-shadow: 0 7.5px 7.5px #e6e6e6;
 }
+.fonct__box__puce:hover {
+  box-shadow: 0 7.5px 7.5px #d9d9d9;
+  background-color: #f2eafb;
+}
 @media all and (min-width: 972px) {
   .fonct__box__puce {
     flex: 1;
