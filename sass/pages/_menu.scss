@@ -50,7 +50,7 @@
     }
     &__line{
         width: 40px;
-        border:2px solid $colour-lightgreen
+        border:2px solid $colour-lightgreen;
     }
     &__detail{
         // border: 1px solid orange;
@@ -65,12 +65,13 @@
         z-index: 0;
         cursor: url(../../public/img/cursor/hand-pointer-regular.png), pointer;
         overflow: hidden;
+        opacity:1;
         
         &__txt{
             // border:3px solid red;
             font-size: 1.3rem;
             padding:10px;
-            padding-right: 50px;
+            padding-right: 55px;
             text-overflow: ellipsis;//affiche les 3 points de suspension
             white-space: nowrap;//empeche le passage à la ligne
             overflow:hidden;//masque le texte en dépassement
@@ -121,7 +122,7 @@
             // border: 1px solid black;
             overflow:hidden;
             z-index:0;
-            transition:all 1s ease-in-out;
+            transition:all 1s ease-in-out;//all : right + transform
         } 
         &__i{
             display:block;
@@ -144,9 +145,42 @@
         }
     }
 }
-@keyframes rotateV{
-    to{
-        transform:rotate(2turn);
-        right:15px;
+
+// @keyframes rotateV{
+//     to{
+//         transform:rotate(2turn);
+//         right:15px;
+//     }
+// }
+
+//apparition progressive des plats à l'ouverture de la page
+
+.entrees{
+    animation: AppearTranslate 1s ease-in;
+    @for $i from 1 to 4{
+        &:nth-child(#{$i}){
+            animation-delay: calc (200ms*$i -200ms);
+        }
+    }
+    
+}
+.plats{
+    animation: AppearTranslate 1s ease-in 0.3s;
+}
+.desserts{
+    animation: AppearTranslate 1s ease-in 0.6s;
+}
+
+@keyframes AppearTranslate{
+    0%{
+        opacity:0;
+        transform: translateY(10px);
+    }
+    // 50%{
+    //     transform: translateY(20px);
+    // }
+    100%{
+        opacity:1;
+        transform: translateY(0px);
     }
 }
