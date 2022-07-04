@@ -59,9 +59,14 @@
         @content;
     }
 }
-@mixin selection-plat {
-    &__name__cost{
-        width:110px;
+@mixin rotate {
+    &__detail__i{
+        transform:rotate(1turn);
+        right:17px;
     }
 }
-
+@mixin font{
+    &__detail__font{
+        width:60px;
+    }
+}

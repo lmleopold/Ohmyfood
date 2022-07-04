@@ -52,16 +52,17 @@
         width: 40px;
         border:2px solid $colour-lightgreen
     }
-    &__name{
+    &__detail{
         // border: 1px solid orange;
         background-color: $colour-white;
         border-radius: 15px;
         @include box-shadow($colour-white);
         display: flex;
-        justify-content: space-between;
+        // justify-content: space-between;
         margin-left: -9px;
         margin-right: -9px;
-        z-index: 1;
+        position:relative;
+        z-index: 0;
         cursor: url(../../public/img/cursor/hand-pointer-regular.png), pointer;
         overflow: hidden;
         
@@ -73,54 +74,79 @@
             text-overflow: ellipsis;//affiche les 3 points de suspension
             white-space: nowrap;//empeche le passage à la ligne
             overflow:hidden;//masque le texte en dépassement
-            z-index:1;
+            z-index:2;
             strong{
                 font-size: 1.4rem;
             }
             width:100%;
-            &:hover + .entrees{
-                @include selection-plat;
+            &:hover ~ .entrees{
+                // @include rotate;
+                @include rotate;
+                @include font;
             }
-            &:hover + .plats{
-                @include selection-plat;
+            &:hover ~ .plats{
+                @include rotate;
+                @include font;
             }
-            &:hover + .desserts{
-                @include selection-plat;
+            &:hover ~ .desserts{
+                // @include rotate;
+                @include rotate;
+                @include font;
             }
             
         }
+        
         &__cost{
             // border: 2px solid green;
-            display: flex;
-            width:48px;
-            transition:all 0.5s linear;
-            margin-left:-48px;
-            z-index: 0;
-            &__p{
-                // border: 1px black solid;
-                &::after{
-                    content: "€";
-                    // border:1px black solid;
-                    padding-bottom: 1px;
-                }
-                padding-right: 20px;
-                padding-bottom: 10px;
-                display:flex;
-                align-items: flex-end;
-            }
-            &__i{
-                // border: 1px solid black;
-                background-color: $colour-lightgreen;
-                font-size: 1.67rem;
-                display:flex;
-                flex:1;
-                align-items: center;
-                padding-left:18px;
-                padding-right:18px;
-                border-radius: 0 14px 14px 0;
-                // z-index: 0;
-                color: $colour-white;
+            // width:48px;
+            // transition:all 0.5s linear;
+            margin-left:-52px;
+            z-index: 1;
+            // border: 1px black solid;
+            padding-right: 20px;
+            padding-bottom: 10px;
+            font-weight: 900;
+            display:flex;
+            align-items: flex-end;
+            &::after{
+                content: "€";
+                // border:1px black solid;
+                padding-bottom: 1px;
             }
         }
+        &__font{
+            border-radius: 0 14px 14px 0;
+            background-color: $colour-lightgreen;
+            width:0px;
+            // border: 1px solid black;
+            overflow:hidden;
+            z-index:0;
+            transition:all 1s ease-in-out;
+        } 
+        &__i{
+            display:block;
+            position:absolute;
+            // animation:rotateV linear infinite;
+            bottom:19px;
+            right:-40px;
+            z-index:0;
+            transition:all 1s ease-in-out;
+            // border: 1px solid black;
+            // background-color: $colour-lightgreen;
+            font-size: 1.7rem;
+            // display:flex;
+            // flex:1;
+            // align-items: center;
+            // padding-left:18px;
+            // padding-right:18px;
+            // border-radius: 0 14px 14px 0;
+            color: $colour-white;
+        }
+    }
+}
+@keyframes rotateV{
+    to{
+        transform:rotate(2turn);
+        right:15px;
     }
 }
