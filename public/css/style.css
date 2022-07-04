@@ -867,7 +867,6 @@ ul {
   z-index: 0;
   cursor: url(../../public/img/cursor/hand-pointer-regular.png), pointer;
   overflow: hidden;
-  opacity: 1;
 }
 .entrees__detail__txt, .plats__detail__txt, .desserts__detail__txt {
   font-size: 1.3rem;
@@ -935,30 +934,48 @@ ul {
   color: #fff;
 }
 
-.entrees {
-  animation: AppearTranslate 1s ease-in;
+.entrees__detail:nth-child(2) {
+  animation: AppearTranslate 1s ease;
+  animation-delay: 100ms;
 }
-.entrees:nth-child(1) {
-  animation-delay: calc 200ms -200ms;
+.entrees__detail:nth-child(3) {
+  animation: AppearTranslate 1s ease;
+  animation-delay: 150ms;
 }
-.entrees:nth-child(2) {
-  animation-delay: calc 400ms -200ms;
-}
-.entrees:nth-child(3) {
-  animation-delay: calc 600ms -200ms;
-}
-
-.plats {
-  animation: AppearTranslate 1s ease-in 0.3s;
+.entrees__detail:nth-child(4) {
+  animation: AppearTranslate 1s ease;
+  animation-delay: 200ms;
 }
 
-.desserts {
-  animation: AppearTranslate 1s ease-in 0.6s;
+.plats__detail:nth-child(2) {
+  animation: AppearTranslate 1s ease;
+  animation-delay: 500ms;
+}
+.plats__detail:nth-child(3) {
+  animation: AppearTranslate 1s ease;
+  animation-delay: 550ms;
+}
+.plats__detail:nth-child(4) {
+  animation: AppearTranslate 1s ease;
+  animation-delay: 600ms;
+}
+
+.desserts__detail:nth-child(2) {
+  animation: AppearTranslate 1s ease;
+  animation-delay: 900ms;
+}
+.desserts__detail:nth-child(3) {
+  animation: AppearTranslate 1s ease;
+  animation-delay: 950ms;
+}
+.desserts__detail:nth-child(4) {
+  animation: AppearTranslate 1s ease;
+  animation-delay: 1000ms;
 }
 
 @keyframes AppearTranslate {
   0% {
-    opacity: 0;
+    opacity: 1;
     transform: translateY(10px);
   }
   100% {
