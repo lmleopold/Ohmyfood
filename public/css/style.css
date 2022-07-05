@@ -631,7 +631,7 @@ ul {
   width: 23px;
 }
 .footer__list__dot__a__i.fa-handshake-angle {
-  rotate: -20deg;
+  transform: rotate(-20deg);
   margin-left: -2.25px;
   margin-right: 2.25px;
 }
