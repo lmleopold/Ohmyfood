@@ -86,6 +86,10 @@
             &:hover{
                 @include box-shadow(darken($colour-white,5%),7.5px);
                 background-color: lighten($color: $colour-primary, $amount: 35%);
+                }
+            &:hover
+            &__i{
+                color: lighten($color:$colour-primary, $amount:10%);
             }
             //pour tous les écrans supérieurs à 768px les éléments suivants s'appliquent
             @include desktop-only {

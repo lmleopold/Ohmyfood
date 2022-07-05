@@ -80,19 +80,6 @@
                 font-size: 1.4rem;
             }
             width:100%;
-            &:hover ~ .entrees{
-                @include rotate;
-                @include font;
-            }
-            &:hover ~ .plats{
-                @include rotate;
-                @include font;
-            }
-            &:hover ~ .desserts{
-                @include rotate;
-                @include font;
-            }
-            
         }
         
         &__cost{
@@ -132,7 +119,7 @@
         }
     }
 }
-
+//animation: apparition des plats à l'ouverture de la page
 .entrees{
     &__detail{
         @for $i from 2 through 4 {
@@ -173,5 +160,24 @@
     100%{
         opacity:1;
         transform: translateY(0px);
+    }
+}
+//animation: lors du survol des plats
+.entrees__detail{
+    &__txt:hover ~ .entrees{
+        @include rotate;
+        @include font;
+    }
+}
+.plats__detail{
+    &__txt:hover ~ .plats{
+        @include rotate;
+        @include font;
+    }
+}
+.desserts__detail{
+    &__txt:hover ~ .desserts{
+        @include rotate;
+        @include font;
     }
 }
