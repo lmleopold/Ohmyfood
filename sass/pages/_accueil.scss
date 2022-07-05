@@ -89,7 +89,6 @@
             }
             //pour tous les écrans supérieurs à 768px les éléments suivants s'appliquent
             @include desktop-only {
-                // background-color: red;
                 flex: 1;
                 max-width: 818px;
                 min-width:fit-content;
