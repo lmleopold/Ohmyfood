@@ -47,10 +47,12 @@
         font-weight: 100;
         text-transform: uppercase;
         font-size: 1.3rem;
+        opacity:0;
     }
     &__line{
         width: 40px;
         border:2px solid $colour-lightgreen;
+        opacity:0;
     }
     &__detail{
         // border: 1px solid orange;
@@ -58,14 +60,13 @@
         border-radius: 15px;
         @include box-shadow($colour-white);
         display: flex;
-        // justify-content: space-between;
         margin-left: -9px;
         margin-right: -9px;
         position:relative;
         z-index: 0;
-        cursor: url(../../public/img/cursor/hand-pointer-regular.png), pointer;
+        cursor: pointer;
         overflow: hidden;
-        // opacity:1;
+        opacity:0;
         
         &__txt{
             // border:3px solid red;
@@ -95,7 +96,7 @@
             &::after{
                 content: "€";
                 // border:1px black solid;
-                padding-bottom: 1px;
+                padding-bottom: 2px;
             }
         }
         &__font{
@@ -105,7 +106,7 @@
             // border: 1px solid black;
             overflow:hidden;
             z-index:0;
-            transition:all 1s ease-in-out;//all : right + transform
+            transition:width 1s ease-in-out;//all : right + transform
         } 
         &__i{
             display:block;
@@ -113,7 +114,7 @@
             bottom:19px;
             right:-40px;
             z-index:0;
-            transition:all 1s ease-in-out;
+            transition:transform 1s ease-in-out, right 1s ease-in-out;
             font-size: 1.7rem;
             color: $colour-white;
         }
@@ -121,10 +122,14 @@
 }
 //animation: apparition des plats à l'ouverture de la page
 .entrees{
+    &__title,&__line{
+        animation: AppearTranslate 1s ease forwards;
+        animation-delay: 0ms;
+    }
     &__detail{
         @for $i from 2 through 4 {
             &:nth-child(#{$i}){
-                animation: AppearTranslate 1s ease;
+                animation: AppearTranslate 1s ease forwards;
                 animation-delay: #{$i*50}ms;
                 
             }
@@ -132,20 +137,28 @@
     }
 }
 .plats{
+    &__title,&__line{
+        animation: AppearTranslate 1s ease forwards;
+        animation-delay: 400ms;
+    }
     &__detail{
         @for $i from 2 through 4 {
             &:nth-child(#{$i}){
-                animation: AppearTranslate 1s ease;
+                animation: AppearTranslate 1s ease forwards;
                 animation-delay: #{$i*50+400}ms;
             }
         }
     }
 }
 .desserts{
+    &__title,&__line{
+        animation: AppearTranslate 1s ease forwards;
+        animation-delay: 800ms;
+    }
     &__detail{
         @for $i from 2 through 4 {
             &:nth-child(#{$i}){
-                animation: AppearTranslate 1s ease;
+                animation: AppearTranslate 1s ease forwards;
                 animation-delay: #{$i*50+ 800}ms;
             }
         }
@@ -154,9 +167,10 @@
 
 @keyframes AppearTranslate{
     0%{
-        opacity:1;
+        opacity:0;
         transform: translateY(10px);
     }
+    
     100%{
         opacity:1;
         transform: translateY(0px);

@@ -29,7 +29,6 @@
         box-shadow: none;
         outline:none;
         width: 120px;
-        // background-color: orange;
     }
     &__title{
         font-size: 1.875rem;
@@ -70,7 +69,6 @@
         @include desktop-only {
             flex-direction: row;
             flex-wrap: wrap;
-            // justify-content: center;
         }
         &__puce{
             // border: 2px solid green;
@@ -139,7 +137,6 @@
             flex-direction: row;
             flex-wrap: wrap;
             justify-content: center;
-            // justify-content: center;
         }
     }
 }
@@ -149,7 +146,6 @@
     // border: 2px green solid;
     //pour tous les écrans supérieurs à 768px les éléments suivants s'appliquent
     @include tablette {
-        // background-color: orange;
         flex: 1;
         max-width: 600px;
         min-width:300px;
@@ -161,6 +157,7 @@
     &__card{
         // border:2px red solid;
         display: flex;
+        flex:1;
         flex-direction: column;
         //pour tous les écrans supérieurs à 768px les éléments suivants s'appliquent
            

@@ -8,13 +8,14 @@
     transition:opacity 400ms ease-in-out;
     // border:2px green solid;
     &--colored{//coeur plein coloré
+        cursor: pointer;
         position: absolute;
         top:0px;
         left:0px;
         z-index: 1;
         color: transparent;
         background-image: linear-gradient(to bottom, $colour-primary, $colour-secondary);
-        background-clip: text;
+        background-clip:text;
         opacity:0;
         transition:opacity 400ms ease-in-out;
         &:hover{

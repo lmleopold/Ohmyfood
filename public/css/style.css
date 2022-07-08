@@ -388,6 +388,7 @@ ul {
   transition: opacity 400ms ease-in-out;
 }
 .heart-button--colored {
+  cursor: pointer;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -785,6 +786,7 @@ ul {
 }
 .menu__card {
   display: flex;
+  flex: 1;
   flex-direction: column;
 }
 .menu__card__img {
@@ -882,10 +884,12 @@ ul {
   font-weight: 100;
   text-transform: uppercase;
   font-size: 1.3rem;
+  opacity: 0;
 }
 .entrees__line, .plats__line, .desserts__line {
   width: 40px;
   border: 2px solid #99e2d0;
+  opacity: 0;
 }
 .entrees__detail, .plats__detail, .desserts__detail {
   background-color: #fff;
@@ -896,8 +900,9 @@ ul {
   margin-right: -9px;
   position: relative;
   z-index: 0;
-  cursor: url(../../public/img/cursor/hand-pointer-regular.png), pointer;
+  cursor: pointer;
   overflow: hidden;
+  opacity: 0;
 }
 .entrees__detail__txt, .plats__detail__txt, .desserts__detail__txt {
   font-size: 1.3rem;
@@ -923,7 +928,7 @@ ul {
 }
 .entrees__detail__cost::after, .plats__detail__cost::after, .desserts__detail__cost::after {
   content: "€";
-  padding-bottom: 1px;
+  padding-bottom: 2px;
 }
 .entrees__detail__font, .plats__detail__font, .desserts__detail__font {
   border-radius: 0 14px 14px 0;
@@ -931,7 +936,7 @@ ul {
   width: 0px;
   overflow: hidden;
   z-index: 0;
-  transition: all 1s ease-in-out;
+  transition: width 1s ease-in-out;
 }
 .entrees__detail__i, .plats__detail__i, .desserts__detail__i {
   display: block;
@@ -939,53 +944,65 @@ ul {
   bottom: 19px;
   right: -40px;
   z-index: 0;
-  transition: all 1s ease-in-out;
+  transition: transform 1s ease-in-out, right 1s ease-in-out;
   font-size: 1.7rem;
   color: #fff;
 }
 
+.entrees__title, .entrees__line {
+  animation: AppearTranslate 1s ease forwards;
+  animation-delay: 0ms;
+}
 .entrees__detail:nth-child(2) {
-  animation: AppearTranslate 1s ease;
+  animation: AppearTranslate 1s ease forwards;
   animation-delay: 100ms;
 }
 .entrees__detail:nth-child(3) {
-  animation: AppearTranslate 1s ease;
+  animation: AppearTranslate 1s ease forwards;
   animation-delay: 150ms;
 }
 .entrees__detail:nth-child(4) {
-  animation: AppearTranslate 1s ease;
+  animation: AppearTranslate 1s ease forwards;
   animation-delay: 200ms;
 }
 
+.plats__title, .plats__line {
+  animation: AppearTranslate 1s ease forwards;
+  animation-delay: 400ms;
+}
 .plats__detail:nth-child(2) {
-  animation: AppearTranslate 1s ease;
+  animation: AppearTranslate 1s ease forwards;
   animation-delay: 500ms;
 }
 .plats__detail:nth-child(3) {
-  animation: AppearTranslate 1s ease;
+  animation: AppearTranslate 1s ease forwards;
   animation-delay: 550ms;
 }
 .plats__detail:nth-child(4) {
-  animation: AppearTranslate 1s ease;
+  animation: AppearTranslate 1s ease forwards;
   animation-delay: 600ms;
 }
 
+.desserts__title, .desserts__line {
+  animation: AppearTranslate 1s ease forwards;
+  animation-delay: 800ms;
+}
 .desserts__detail:nth-child(2) {
-  animation: AppearTranslate 1s ease;
+  animation: AppearTranslate 1s ease forwards;
   animation-delay: 900ms;
 }
 .desserts__detail:nth-child(3) {
-  animation: AppearTranslate 1s ease;
+  animation: AppearTranslate 1s ease forwards;
   animation-delay: 950ms;
 }
 .desserts__detail:nth-child(4) {
-  animation: AppearTranslate 1s ease;
+  animation: AppearTranslate 1s ease forwards;
   animation-delay: 1000ms;
 }
 
 @keyframes AppearTranslate {
   0% {
-    opacity: 1;
+    opacity: 0;
     transform: translateY(10px);
   }
   100% {
