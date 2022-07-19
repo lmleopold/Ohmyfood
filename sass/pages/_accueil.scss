@@ -1,76 +1,85 @@
-.localisation{
+.localisation {
     background-color: $colour-lightgrey;
     z-index: -1;
-    display:flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
     padding-bottom: 56px;
+
     // border: purple 2px solid;
-    &__detail{
-        background-color:$colour-darkgrey;
+    &__detail {
+        background-color: $colour-darkgrey;
         width: 100%;
         // border: green 2px solid;
-        display:flex;
+        display: flex;
         justify-content: center;
-        align-items:flex-end;
+        align-items: flex-end;
         padding-top: 13px;
         padding-bottom: 15px;
     }
-    &__punaise{
+
+    &__punaise {
         margin-right: 15px;
         padding-bottom: 3.75px;
         color: lighten($color: $colour-black, $amount: 15%);
     }
-    &__name{
+
+    &__name {
         color: $colour-black;
         font-weight: 500;
         background-color: inherit;
         border: none;
         box-shadow: none;
-        outline:none;
+        outline: none;
         width: 120px;
     }
-    &__title{
+
+    &__title {
         font-size: 1.875rem;
         // border: 1px solid blue;
         text-align: center;
         font-weight: 900;
         padding-top: 45px;
-        
+
     }
-    &__subtitle{
-    color:lighten($color: $colour-black, $amount: 50%);
-    font-size:1.5rem;
-    display:flex;
-    padding:19px 0 30px 0;
-    display:flex;
-    text-align: center;
-    // border: 1px solid red;
-    font-weight: 100;
-    filter: none;
+
+    &__subtitle {
+        color: lighten($color: $colour-black, $amount: 50%);
+        font-size: 1.5rem;
+        display: flex;
+        padding: 19px 0 30px 0;
+        display: flex;
+        text-align: center;
+        // border: 1px solid red;
+        font-weight: 100;
+        filter: none;
     }
 }
 
-.fonct{
+.fonct {
     // border: orange 2px solid;
-    margin:auto;
-    padding:$layout-padding-top $layout-padding-side $layout-padding-bottom $layout-padding-side;
-    &__title{
+    margin: auto;
+    padding: $layout-padding-top $layout-padding-side $layout-padding-bottom $layout-padding-side;
+
+    &__title {
         padding-bottom: $layout-object-spacer;
         flex: 1;
         // border: 2px red solid;
     }
-    &__box{
+
+    &__box {
         // border: 2px red solid;
         display: flex;
         flex-direction: column;
         gap: $layout-object-spacer;
-        //pour tous les écrans supérieurs à 768px les éléments suivants s'appliquent
+
+        //pour tous les écrans supérieurs à 972px les éléments suivants s'appliquent
         @include desktop-only {
             flex-direction: row;
             flex-wrap: wrap;
         }
-        &__puce{
+
+        &__puce {
             // border: 2px solid green;
             background-color: $colour-lightgrey;
             display: flex;
@@ -78,24 +87,27 @@
             padding-top: 27px;
             padding-bottom: 23px;
             border-radius: 19px;
-            margin-left:12px;
+            margin-left: 12px;
             align-items: center;
-            @include box-shadow($colour-white,7.5px);
-            &:hover{
-                @include box-shadow(darken($colour-white,5%),7.5px);
+            @include box-shadow($colour-white, 7.5px);
+
+            &:hover {
+                @include box-shadow(darken($colour-white, 5%), 7.5px);
                 background-color: lighten($color: $colour-primary, $amount: 35%);
-                }
-            &:hover
-            &__i{
-                color: lighten($color:$colour-primary, $amount:10%);
             }
-            //pour tous les écrans supérieurs à 768px les éléments suivants s'appliquent
+
+            &:hover &__i {
+                color: lighten($color: $colour-primary, $amount: 10%);
+            }
+
+            //pour tous les écrans supérieurs à 972px les éléments suivants s'appliquent
             @include desktop-only {
                 flex: 1;
                 max-width: 818px;
-                min-width:fit-content;
+                min-width: fit-content;
             }
-            &__num{
+
+            &__num {
                 background-color: $colour-primary;
                 color: $colour-white;
                 width: 24px;
@@ -107,31 +119,36 @@
                 margin-left: -12px;
                 font-size: 1.25rem;
             }
-            &__i{
+
+            &__i {
                 font-size: 1.5rem;
                 color: lighten($color: $colour-black, $amount: 50%);
             }
-            &__h4{
+
+            &__h4 {
                 // border: 2px blue dotted;
             }
         }
     }
 }
 
-.restaurants{
-    padding:$layout-padding-top $layout-padding-side $layout-padding-bottom $layout-padding-side;
+.restaurants {
+    padding: $layout-padding-top $layout-padding-side $layout-padding-bottom $layout-padding-side;
     background-color: $colour-darkgrey;
-    display:flex;
+    display: flex;
     flex-direction: column;
-    &__title{
+
+    &__title {
         padding-bottom: $layout-object-spacer;
         display: flex;
     }
-    &__box{
+
+    &__box {
         // border: 2px pink solid;
         display: flex;
         flex-direction: column;
-        gap:18px;
+        gap: 18px;
+
         //pour tous les écrans supérieurs à 768px les éléments suivants s'appliquent
         @include tablette {
             flex-direction: row;
@@ -140,28 +157,31 @@
         }
     }
 }
-    
-.menu{
-    display:flex;
+
+.menu {
+    display: flex;
+
     // border: 2px green solid;
     //pour tous les écrans supérieurs à 768px les éléments suivants s'appliquent
     @include tablette {
         flex: 1;
         max-width: 600px;
-        min-width:300px;
+        min-width: 300px;
     }
-    @include desktop-only{
+    //pour tous les écrans supérieurs à 972px les éléments suivants s'appliquent
+    @include desktop-only {
         min-width: 453px;
         max-width: 900px;
     }
-    &__card{
+
+    &__card {
         // border:2px red solid;
         display: flex;
-        flex:1;
+        flex: 1;
         flex-direction: column;
         //pour tous les écrans supérieurs à 768px les éléments suivants s'appliquent
-           
-        &__img{
+
+        &__img {
             width: 100%;
             height: 176px;
             min-height: 176px;
@@ -169,35 +189,40 @@
             overflow: hidden;
             display: flex;
             border-radius: 23px 23px 0 0;
+
             // border:blue 3px solid;
-                img{
-                object-fit:cover;
+            img {
+                object-fit: cover;
                 width: 100%;
                 min-width: 100%;
-                }
-                &.a,&.b{
-                    @include nouveau;
-                }
-        }        
-        &__capt{
+            }
+
+            &.a,
+            &.b {
+                @include nouveau;
+            }
+        }
+
+        &__capt {
             // border: purple 2px solid;
             display: flex;
             max-width: 100%;
             justify-content: space-between;
             background-color: $colour-white;
             padding: 15px 12px;
-            flex:1;
+            flex: 1;
             align-items: center;
             border-radius: 0 0 23px 23px;
             color: lighten($color: $colour-black, $amount: 30%);
             @include box-shadow($colour-white);
-            strong{
+
+            strong {
                 color: $colour-black;
             }
-            div{
-                position:relative;
+
+            div {
+                position: relative;
             }
         }
     }
 }
-

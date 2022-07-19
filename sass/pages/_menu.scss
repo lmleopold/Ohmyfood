@@ -1,60 +1,70 @@
-.banniere{
+.banniere {
     height: 257px;
     overflow: hidden;
     z-index: 1;
-    display:flex;
-    &__img{
+    display: flex;
+
+    &__img {
         max-width: 100%;
-        flex:1;
+        flex: 1;
         object-fit: cover;
     }
 }
-.carte{
+
+.carte {
     background-color: $colour-lightgrey;
-    display:flex;
+    display: flex;
     flex-direction: column;
     padding: 0 $layout-padding-side 80px $layout-padding-side;
     border-radius: 30px 30px 0 0;
-    margin-top:-$menu-rubrique-spacer;
+    margin-top: -$menu-rubrique-spacer;
     z-index: 1;
-    &__title{
+
+    &__title {
         display: flex;
-        justify-content:space-between;
-        padding:$menu-rubrique-spacer 0;
+        justify-content: space-between;
+        padding: $menu-rubrique-spacer 0;
         font-size: 2.5rem;
         // border: red 2px solid;
-        
-        span{
-            text-transform:capitalize;
+
+        span {
+            text-transform: capitalize;
         }
-        div{
+
+        div {
             // border: 2px orange solid;
             position: relative;
             padding-right: 18px;
-            display:flex;
+            display: flex;
         }
     }
 }
-.entrees,.plats,.desserts{
+
+.entrees,
+.plats,
+.desserts {
     display: flex;
     flex-direction: column;
-    gap:$menu-plat-spacer;
+    gap: $menu-plat-spacer;
     margin-bottom: $menu-rubrique-spacer;
+
     // border: green 2px solid;
-    &__title{
+    &__title {
         padding-bottom: $menu-underline-spacer-top;
-        color:lighten($colour-black, $amount: 20%);
+        color: lighten($colour-black, $amount: 20%);
         font-weight: 100;
         text-transform: uppercase;
         font-size: 1.3rem;
-        opacity:0;
+        opacity: 0;
     }
-    &__line{
+
+    &__line {
         width: 40px;
-        border:2px solid $colour-lightgreen;
-        opacity:0;
+        border: 2px solid $colour-lightgreen;
+        opacity: 0;
     }
-    &__detail{
+
+    &__detail {
         // border: 1px solid orange;
         background-color: $colour-white;
         border-radius: 15px;
@@ -62,102 +72,118 @@
         display: flex;
         margin-left: -9px;
         margin-right: -9px;
-        position:relative;
+        position: relative;
         z-index: 0;
         cursor: pointer;
         overflow: hidden;
-        opacity:0;
-        
-        &__txt{
+        opacity: 0;
+
+        &__txt {
             // border:3px solid red;
             font-size: 1.3rem;
-            padding:10px;
+            padding: 10px;
             padding-right: 55px;
-            text-overflow: ellipsis;//affiche les 3 points de suspension
-            white-space: nowrap;//empeche le passage à la ligne
-            overflow:hidden;//masque le texte en dépassement
-            z-index:2;
-            strong{
+            text-overflow: ellipsis; //affiche les 3 points de suspension
+            white-space: nowrap; //empeche le passage à la ligne
+            overflow: hidden; //masque le texte en dépassement
+            z-index: 2;
+
+            strong {
                 font-size: 1.4rem;
             }
+
             width:100%;
         }
-        
-        &__cost{
+
+        &__cost {
             // border: 2px solid green;
-            margin-left:-52px;
+            margin-left: -52px;
             z-index: 1;
-            // border: 1px black solid;
             padding-right: 20px;
             padding-bottom: 10px;
             font-weight: 900;
-            display:flex;
+            display: flex;
             align-items: flex-end;
-            &::after{
+
+            &::after {
                 content: "€";
                 // border:1px black solid;
                 padding-bottom: 2px;
             }
         }
-        &__font{
+
+        &__font {
             border-radius: 0 14px 14px 0;
             background-color: $colour-lightgreen;
-            width:0px;
+            width: 0px;
             // border: 1px solid black;
-            overflow:hidden;
-            z-index:0;
-            transition:width 1s ease-in-out;//all : right + transform
-        } 
-        &__i{
-            display:block;
-            position:absolute;
-            bottom:19px;
-            right:-40px;
-            z-index:0;
-            transition:transform 1s ease-in-out, right 1s ease-in-out;
+            overflow: hidden;
+            z-index: 0;
+            transition: width 1s ease-in-out;
+        }
+
+        &__i {
+            display: block;
+            position: absolute;
+            bottom: 19px;
+            right: -40px;
+            z-index: 0;
+            transition: transform 1s ease-in-out, right 1s ease-in-out;
             font-size: 1.7rem;
             color: $colour-white;
         }
     }
 }
+
 //animation: apparition des plats à l'ouverture de la page
-.entrees{
-    &__title,&__line{
+.entrees {
+
+    &__title,
+    &__line {
         animation: AppearTranslate 1s ease forwards;
         animation-delay: 0ms;
     }
-    &__detail{
+
+    &__detail {
         @for $i from 2 through 4 {
-            &:nth-child(#{$i}){
+            &:nth-child(#{$i}) {
                 animation: AppearTranslate 1s ease forwards;
                 animation-delay: #{$i*50}ms;
-                
+
             }
         }
     }
 }
-.plats{
-    &__title,&__line{
+
+.plats {
+
+    &__title,
+    &__line {
         animation: AppearTranslate 1s ease forwards;
         animation-delay: 400ms;
     }
-    &__detail{
+
+    &__detail {
         @for $i from 2 through 4 {
-            &:nth-child(#{$i}){
+            &:nth-child(#{$i}) {
                 animation: AppearTranslate 1s ease forwards;
                 animation-delay: #{$i*50+400}ms;
             }
         }
     }
 }
-.desserts{
-    &__title,&__line{
+
+.desserts {
+
+    &__title,
+    &__line {
         animation: AppearTranslate 1s ease forwards;
         animation-delay: 800ms;
     }
-    &__detail{
+
+    &__detail {
         @for $i from 2 through 4 {
-            &:nth-child(#{$i}){
+            &:nth-child(#{$i}) {
                 animation: AppearTranslate 1s ease forwards;
                 animation-delay: #{$i*50+ 800}ms;
             }
@@ -165,32 +191,35 @@
     }
 }
 
-@keyframes AppearTranslate{
-    0%{
-        opacity:0;
+@keyframes AppearTranslate {
+    0% {
+        opacity: 0;
         transform: translateY(10px);
     }
-    
-    100%{
-        opacity:1;
+
+    100% {
+        opacity: 1;
         transform: translateY(0px);
     }
 }
+
 //animation: lors du survol des plats
-.entrees__detail{
-    &__txt:hover ~ .entrees{
+.entrees__detail {
+    &__txt:hover~.entrees {
         @include rotate;
         @include font;
     }
 }
-.plats__detail{
-    &__txt:hover ~ .plats{
+
+.plats__detail {
+    &__txt:hover~.plats {
         @include rotate;
         @include font;
     }
 }
-.desserts__detail{
-    &__txt:hover ~ .desserts{
+
+.desserts__detail {
+    &__txt:hover~.desserts {
         @include rotate;
         @include font;
     }

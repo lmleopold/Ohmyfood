@@ -1,37 +1,39 @@
 body {
     font-family: 'Roboto', sans-serif;
-    color: $colour-black;  
+    color: $colour-black;
     text-decoration: none;
 }
 
-.shrikhand{
+.shrikhand {
     font-family: 'Shrikhand', cursive;
     font-weight: 100;
 }
 
-strong{
+strong {
     font-weight: 900;
 }
 
-a{
+a {
     text-decoration: none;
     color: $colour-black;
-   
+
 }
 
-h2,h3{
+h2,
+h3 {
     font-size: 1.875rem;
 }
 
-input,h4{
-    font-size:1.25rem;
+input,
+h4 {
+    font-size: 1.25rem;
 }
 
-p{
+p {
     font-size: 1.4rem;
     line-height: 125%;
 }
-    
-ul{
+
+ul {
     list-style-type: none;
 }

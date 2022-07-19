@@ -1,43 +1,51 @@
 .header {
-    z-index:1;
-    background-color:$colour-white;
+    z-index: 1;
+    background-color: $colour-white;
     max-width: 100%;
     // border:3px blue solid;
-    position:relative;
+    position: relative;
     display: flex;
     align-items: flex-end;
-    justify-content: center;    
-    box-shadow: 0 3px 3px darken($colour-darkgrey,10%);
-    &__logo{
+    justify-content: center;
+    box-shadow: 0 3px 3px darken($colour-darkgrey, 10%);
+
+    &__logo {
         // border: 4px green solid;
         font-size: 2.5rem;
         padding-top: 20px;
         padding-bottom: 10px;
-        margin:auto;
+        margin: auto;
         justify-content: center;
     }
-    &--menu{
-        &.header{
+
+    &--menu {
+        &.header {
             box-shadow: none;
-            @include arrow_under_breakpoint{
+
+            
+            @include arrow_under_breakpoint {//en dessous du breakpoint le header passe en mode colonne
                 // background-color: red;
                 flex-direction: column;
             }
         }
-        &__logo{
+
+        &__logo {
+
             // background-color: yellow;
-            @include arrow_under_breakpoint{
-            max-width: 100%;
-            word-wrap: break-word;
-            text-align: center;
+            @include arrow_under_breakpoint {
+                max-width: 100%;
+                word-wrap: break-word;
+                text-align: center;
             }
         }
-        &__link{
+
+        &__link {
             // border: 2px solid black;
-            position:absolute;            
-            top:2rem;
-            left:2rem;
-            @include arrow_under_breakpoint{
+            position: absolute;
+            top: 2rem;
+            left: 2rem;
+
+            @include arrow_under_breakpoint {//en dessous du breakpoint le lien flèche passe au milieu
                 // background-color: orange;
                 position: static;
                 margin: auto;
@@ -45,6 +53,5 @@
             }
         }
 
-    }    
+    }
 }
-
