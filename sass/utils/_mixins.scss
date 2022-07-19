@@ -1,8 +1,8 @@
-@mixin box-shadow($colour:lightness-shift($colour-primary), $offset: $box-shadow-size){
-    box-shadow:0 $offset $offset lightness-shift($colour);
+@mixin box-shadow($colour: lightness-shift($colour-primary), $offset: $box-shadow-size) {
+    box-shadow: 0 $offset $offset lightness-shift($colour);
 }
 
-@mixin text-shadow($colour:lightness-shift($colour-primary), $offset: $text-shadow-size){
+@mixin text-shadow($colour: lightness-shift($colour-primary), $offset: $text-shadow-size) {
     text-shadow: 0px 0px $offset lightness-shift($colour);
 }
 
@@ -16,57 +16,63 @@
     font-size: 1.2rem;
     font-weight: 900;
     @include box-shadow($colour-darkgrey);
-    &--menu{
-        padding-left:50px;
-        padding-right:50px;
-        margin:17px auto 0 auto;
+
+    &--menu {
+        padding-left: 50px;
+        padding-right: 50px;
+        margin: 17px auto 0 auto;
     }
-    &:hover{
-        background:linear-gradient(to bottom right, lighten($colour-secondary,5%), lighten($colour-primary,5%));
-        @include box-shadow(darken($colour-darkgrey,5%));
+
+    &:hover {
+        background: linear-gradient(to bottom right, lighten($colour-secondary, 5%), lighten($colour-primary, 5%));
+        @include box-shadow(darken($colour-darkgrey, 5%));
     }
 }
 
-@mixin nouveau{
-    &::before{
+@mixin nouveau {
+    &::before {
         z-index: 1;
         content: "Nouveau";
         font-size: 1rem;
         font-weight: 900;
-        padding:8px 11px;
+        padding: 8px 11px;
         border-radius: 3px;
         color: $colour-darkgreen;
-        background:$colour-lightgreen;
+        background: $colour-lightgreen;
         display: block;
         position: absolute;
-        top:15px;
-        right:15px;
+        top: 15px;
+        right: 15px;
     }
 }
 
 @mixin desktop-only {
-    @media all and (min-width:$breakpoint-desktop){
+    @media all and (min-width:$breakpoint-desktop) {
         @content;
     }
 }
-@mixin tablette{
-    @media all and (min-width:$breakpoint-tablette){
+
+@mixin tablette {
+    @media all and (min-width:$breakpoint-tablette) {
         @content;
     }
 }
+
 @mixin arrow_under_breakpoint {
-    @media all and(max-width:$breakpoint-arrow){
+    @media all and(max-width:$breakpoint-arrow) {
         @content;
     }
 }
+
 @mixin rotate {
-    &__detail__i{
-        transform:rotate(1turn);
-        right:17px;
+    &__detail__i {
+        transform: rotate(1turn);
+        right: 17px;
     }
 }
-@mixin font{
-    &__detail__font{
-        width:60px;
+
+@mixin font {
+    &__detail__font {
+        width: 60px;
     }
 }

@@ -1,198 +1,201 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
-        <title>ohmyfood_menu4</title>
-        <!--Encodage UTF8-->
-        <meta charset="utf-8" />        
-        <!-- définition du viewport pour permettre un affichage adapté sur les portables et tablettes-->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0 , user-scalable=no"/>
-        <!--Lien vers les styles google-fonts font-family: 'Shrikhand', cursive et 'Roboto', sans-serif;-->
-        <style>
-            @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap');
-        </style> 
-        <!--Lien vers la librairie Fontawesome pour avoir les icones-->
-        <script src="https://kit.fontawesome.com/38d53822e9.js" crossorigin="anonymous"></script>
-        <!-- lien vers la page de style CSS-->
-        <link rel="stylesheet" href="./public/css/prefixed/style.css" />
 
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-0BWVDR7Z09"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-0BWVDR7Z09');
-        </script>
-    </head>
+<head>
+    <title>ohmyfood_menu4</title>
+    <!--Encodage UTF8-->
+    <meta charset="utf-8" />
+    <!-- définition du viewport pour permettre un affichage adapté sur les portables et tablettes-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 , user-scalable=no" />
+    <!--Lien vers les styles google-fonts font-family: 'Shrikhand', cursive et 'Roboto', sans-serif;-->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap');
+    </style>
+    <!--Lien vers la librairie Fontawesome pour avoir les icones-->
+    <script src="https://kit.fontawesome.com/38d53822e9.js" crossorigin="anonymous"></script>
+    <!-- lien vers la page de style CSS-->
+    <link rel="stylesheet" href="./public/css/prefixed/style.css" />
 
-    <body>
-        <!-- header -->
-        <header class="header header--menu container">
-            <a href="./index.html" class="header--menu__link">
-                <i class="fa-solid fa-arrow-left fa-xl header--menu__link__i"></i>
-            </a>
-            <h1 class="header__logo header--menu__logo shrikhand">
-                ohmyfood
-            </h1>           
-        </header>
-    
-        <!--banniere-->
-            <div class="banniere container">
-                <img class="banniere__img" src="./public/img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Photo du restaurant 'Le délice des sens'">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0BWVDR7Z09"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-0BWVDR7Z09');
+    </script>
+</head>
+
+<body>
+    <!-- header -->
+    <header class="header header--menu container">
+        <a href="./index.html" class="header--menu__link">
+            <i class="fa-solid fa-arrow-left fa-xl header--menu__link__i"></i>
+        </a>
+        <h1 class="header__logo header--menu__logo shrikhand">
+            ohmyfood
+        </h1>
+    </header>
+
+    <!--banniere-->
+    <div class="banniere container">
+        <img class="banniere__img" src="./public/img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
+            alt="Photo du restaurant 'Le délice des sens'">
+    </div>
+    <!-- Carte -->
+    <main class="carte container">
+
+        <section class="carte__title">
+            <h2 class="carte__title__text shrikhand"><span>L</span>e délice des sens</h2>
+            <div>
+                <i class="fa-solid fa-heart heart-button heart-button--colored"></i>
+                <i class="fa-regular fa-heart heart-button"></i>
             </div>
-        <!-- Carte -->
-        <main class="carte container"> 
-            
-            <section class="carte__title">
-                <h2 class="carte__title__text shrikhand"><span>L</span>e délice des sens</h2>
-                <div>
-                    <i class="fa-solid fa-heart heart-button heart-button--colored"></i>
-                    <i class="fa-regular fa-heart heart-button"></i>
-                </div>
-            </section>
+        </section>
 
-            <!-- Entrées -->
-            <section class="entrees">
-                <div>
-                    <h3 class="entrees__title">
-                        Entrées
-                    </h3>
-                    <div class="entrees__line"></div>
-                </div>
-                <div class="entrees__detail">
-                    <p class="entrees__detail__txt">
-                        <strong>Tartare de thon</strong>
-                        <br/>Assaisonné au yuzu
-                    </p>
-                    <p class="entrees__detail__cost">25</p>
-                    <div class="entrees__detail__font"></div>
-                    <i class="entrees__detail__i fa-solid fa-circle-check"></i>
-                </div>
-                <div class="entrees__detail">
-                    <p class="entrees__detail__txt">
-                        <strong>Bouchée de homard croustillant</strong>
-                        <br/>Et sa farandole de petits légumes
-                    </p>
-                    <p class="entrees__detail__cost">35</p>
-                    <div class="entrees__detail__font"></div>
-                    <i class="entrees__detail__i fa-solid fa-circle-check"></i>
-                </div>
-                <div class="entrees__detail">
-                    <p class="entrees__detail__txt">
-                        <strong>Velouté de cèpes</strong>
-                        <br/>Aux truffes
-                    </p>
-                    <p class="entrees__detail__cost">20</p>
-                    <div class="entrees__detail__font"></div>
-                    <i class="entrees__detail__i fa-solid fa-circle-check"></i>
-                </div>
-            </section>
-
-            <!-- Plats -->
-            <section class="plats">
-                <div>
-                    <h3 class="plats__title">
-                        Plats
-                    </h3>
-                    <div class="plats__line"></div>
-                </div>                
-                <div class="plats__detail">
-                    <p class="plats__detail__txt">
-                        <strong>Poulet rôti aux herbes de Provence</strong>
-                        <br/>Et sa crème de truffe
-                    </p>
-                    <p class="plats__detail__cost">40</p>
-                    <div class="plats__detail__font"></div>
-                    <i class="plats__detail__i fa-solid fa-circle-check"></i>
-                </div>
-                <div class="plats__detail">
-                    <p class="plats__detail__txt">
-                        <strong>Langouste rôtie</strong>
-                        <br/>Et ses légumes de saison
-                    </p>
-                    <p class="plats__detail__cost">35</p>
-                    <div class="plats__detail__font"></div>
-                    <i class="plats__detail__i fa-solid fa-circle-check"></i>
-                </div>
-                <div class="plats__detail">
-                    <p class="plats__detail__txt">
-                        <strong>Côte de boeuf Angus</strong>
-                        <br/>Et sa purée de panais
-                    </p>
-                    <p class="plats__detail__cost">44</p>
-                    <div class="plats__detail__font"></div>
-                    <i class="plats__detail__i fa-solid fa-circle-check"></i>
-                </div>
-            </section>
-
-            <!-- Desserts -->
-            <section class="desserts">
-                <div>
-                    <h3 class="desserts__title">
-                        Desserts
-                    </h3>
-                    <div class="desserts__line"></div>
-                </div>
-                <div class="desserts__detail">
-                    <p class="desserts__detail__txt">
-                        <strong>Farandole de desserts</strong>
-                        <br/>Du chef
-                    </p>
-                    <p class="desserts__detail__cost">18</p>
-                    <div class="desserts__detail__font"></div>
-                    <i class="desserts__detail__i fa-solid fa-circle-check"></i>
-                </div>
-                <div class="desserts__detail">
-                    <p class="desserts__detail__txt">
-                        <strong>Crème brulée </strong>
-                        <br/>Revisitée
-                    </p>
-                    <p class="desserts__detail__cost">22</p>
-                    <div class="desserts__detail__font"></div>
-                    <i class="desserts__detail__i fa-solid fa-circle-check"></i>
-                </div>
-                <div class="desserts__detail">
-                    <p class="desserts__detail__txt">
-                        <strong>Tiramisu</strong>
-                        <br/>À la noisette
-                    </p>
-                    <p class="desserts__detail__cost">23</p>
-                    <div class="desserts__detail__font"></div>
-                    <i class="desserts__detail__i fa-solid fa-circle-check"></i>
-                </div>
-            </section>
-            <a href="#" class="button button--menu">Commander</a>
-        </main>
-
-        <!-- Footer -->
-        <footer class="footer">
-            <div class="container container--footer">
-                <h2 class="footer__logo shrikhand">ohmyfood</h2>
-                <ul class="footer__list">
-                    <li class="footer__list__dot">
-                        <a class="footer__list__dot__a" href="#">
-                            <i class="fa-solid fa-utensils footer__list__dot__a__i"></i>
-                            <h4>Proposer un restaurant</h4>
-                        </a>
-                    </li>
-                    <li class="footer__list__dot">
-                        <a class="footer__list__dot__a" href="#">
-                            <i class="fa-solid fa-handshake-angle footer__list__dot__a__i"></i>
-                            <h4>Devenir partenaire</h4>
-                        </a>
-                    </li>
-                    <li class="footer__list__dot">
-                        <a class="footer__list__dot__a" href="#">
-                            <h4>Mentions légales</h4>
-                        </a>
-                    </li>
-                    <li class="footer__list__dot">
-                        <a class="footer__list__dot__a" href="mailto:louismarie.leopold@gmail.com">
-                            <h4>Contact</h4>
-                        </a>
-                    </li>
-                </ul>
+        <!-- Entrées -->
+        <section class="entrees">
+            <div>
+                <h3 class="entrees__title">
+                    Entrées
+                </h3>
+                <div class="entrees__line"></div>
             </div>
-        </footer>
-    </body>
+            <div class="entrees__detail">
+                <p class="entrees__detail__txt">
+                    <strong>Tartare de thon</strong>
+                    <br />Assaisonné au yuzu
+                </p>
+                <p class="entrees__detail__cost">25</p>
+                <div class="entrees__detail__font"></div>
+                <i class="entrees__detail__i fa-solid fa-circle-check"></i>
+            </div>
+            <div class="entrees__detail">
+                <p class="entrees__detail__txt">
+                    <strong>Bouchée de homard croustillant</strong>
+                    <br />Et sa farandole de petits légumes
+                </p>
+                <p class="entrees__detail__cost">35</p>
+                <div class="entrees__detail__font"></div>
+                <i class="entrees__detail__i fa-solid fa-circle-check"></i>
+            </div>
+            <div class="entrees__detail">
+                <p class="entrees__detail__txt">
+                    <strong>Velouté de cèpes</strong>
+                    <br />Aux truffes
+                </p>
+                <p class="entrees__detail__cost">20</p>
+                <div class="entrees__detail__font"></div>
+                <i class="entrees__detail__i fa-solid fa-circle-check"></i>
+            </div>
+        </section>
+
+        <!-- Plats -->
+        <section class="plats">
+            <div>
+                <h3 class="plats__title">
+                    Plats
+                </h3>
+                <div class="plats__line"></div>
+            </div>
+            <div class="plats__detail">
+                <p class="plats__detail__txt">
+                    <strong>Poulet rôti aux herbes de Provence</strong>
+                    <br />Et sa crème de truffe
+                </p>
+                <p class="plats__detail__cost">40</p>
+                <div class="plats__detail__font"></div>
+                <i class="plats__detail__i fa-solid fa-circle-check"></i>
+            </div>
+            <div class="plats__detail">
+                <p class="plats__detail__txt">
+                    <strong>Langouste rôtie</strong>
+                    <br />Et ses légumes de saison
+                </p>
+                <p class="plats__detail__cost">35</p>
+                <div class="plats__detail__font"></div>
+                <i class="plats__detail__i fa-solid fa-circle-check"></i>
+            </div>
+            <div class="plats__detail">
+                <p class="plats__detail__txt">
+                    <strong>Côte de boeuf Angus</strong>
+                    <br />Et sa purée de panais
+                </p>
+                <p class="plats__detail__cost">44</p>
+                <div class="plats__detail__font"></div>
+                <i class="plats__detail__i fa-solid fa-circle-check"></i>
+            </div>
+        </section>
+
+        <!-- Desserts -->
+        <section class="desserts">
+            <div>
+                <h3 class="desserts__title">
+                    Desserts
+                </h3>
+                <div class="desserts__line"></div>
+            </div>
+            <div class="desserts__detail">
+                <p class="desserts__detail__txt">
+                    <strong>Farandole de desserts</strong>
+                    <br />Du chef
+                </p>
+                <p class="desserts__detail__cost">18</p>
+                <div class="desserts__detail__font"></div>
+                <i class="desserts__detail__i fa-solid fa-circle-check"></i>
+            </div>
+            <div class="desserts__detail">
+                <p class="desserts__detail__txt">
+                    <strong>Crème brulée </strong>
+                    <br />Revisitée
+                </p>
+                <p class="desserts__detail__cost">22</p>
+                <div class="desserts__detail__font"></div>
+                <i class="desserts__detail__i fa-solid fa-circle-check"></i>
+            </div>
+            <div class="desserts__detail">
+                <p class="desserts__detail__txt">
+                    <strong>Tiramisu</strong>
+                    <br />À la noisette
+                </p>
+                <p class="desserts__detail__cost">23</p>
+                <div class="desserts__detail__font"></div>
+                <i class="desserts__detail__i fa-solid fa-circle-check"></i>
+            </div>
+        </section>
+        <a href="#" class="button button--menu">Commander</a>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container container--footer">
+            <h2 class="footer__logo shrikhand">ohmyfood</h2>
+            <ul class="footer__list">
+                <li class="footer__list__dot">
+                    <a class="footer__list__dot__a" href="#">
+                        <i class="fa-solid fa-utensils footer__list__dot__a__i"></i>
+                        <h4>Proposer un restaurant</h4>
+                    </a>
+                </li>
+                <li class="footer__list__dot">
+                    <a class="footer__list__dot__a" href="#">
+                        <i class="fa-solid fa-handshake-angle footer__list__dot__a__i"></i>
+                        <h4>Devenir partenaire</h4>
+                    </a>
+                </li>
+                <li class="footer__list__dot">
+                    <a class="footer__list__dot__a" href="#">
+                        <h4>Mentions légales</h4>
+                    </a>
+                </li>
+                <li class="footer__list__dot">
+                    <a class="footer__list__dot__a" href="mailto:louismarie.leopold@gmail.com">
+                        <h4>Contact</h4>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+</body>
+
 </html>

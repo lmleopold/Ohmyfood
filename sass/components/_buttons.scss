@@ -2,27 +2,32 @@
     @include button;
 }
 
-.heart-button{//coeur noir détouré
+.heart-button {
+    //coeur noir détouré
     font-size: 1.875rem;
-    opacity:1;
-    transition:opacity 400ms ease-in-out;
+    opacity: 1;
+    transition: opacity 400ms ease-in-out;
+
     // border:2px green solid;
-    &--colored{//coeur plein coloré
+    &--colored {
+        //coeur plein coloré
         cursor: pointer;
         position: absolute;
-        top:0px;
-        left:0px;
+        top: 0px;
+        left: 0px;
         z-index: 1;
         color: transparent;
         background-image: linear-gradient(to bottom, $colour-primary, $colour-secondary);
-        background-clip:text;
-        opacity:0;
-        transition:opacity 400ms ease-in-out;
-        &:hover{
-            opacity:1;
+        background-clip: text;
+        opacity: 0;
+        transition: opacity 400ms ease-in-out;
+
+        &:hover {
+            opacity: 1;
         }
-        &:hover + .fa-regular{
-            opacity:0;
+
+        &:hover+.fa-regular {//au survol le coeur détouré s'estompe
+            opacity: 0;
         }
     }
 }
