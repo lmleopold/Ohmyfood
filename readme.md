@@ -10,7 +10,7 @@
 
 Ohmyfood! is an online meal ordering company. Our concept allows users to compose their own menu and reduce their waiting time in restaurants because their menu is prepared in advance.
 
-The main goal of this project website is to master Scss and BEM, as well as CSS animations and transitions.
+The main goal of this project website is to master SCSS and BEM, as well as CSS animations and transitions.
 
 Checkout here for more details about the technical specifications: 
 * [technical_sepcifications]( /specificationsTechniques_maquettes/DW-P3-Brief-creatif-Ohmyfood!.pdf)
