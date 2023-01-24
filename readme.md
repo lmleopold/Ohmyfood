@@ -12,11 +12,9 @@ Ohmyfood! is an online meal ordering company. Our concept allows users to compos
 
 The main goal of this project website is to master Scss and BEM, as well as CSS animations and transitions.
 
-The code had to be made of pure HTML5 and CSS3 without any framework (bootstrap, tailwind…) nor preprocessor (sass).
-
-Checkout here for more details about the technical specifications and mockups of this project : 
+Checkout here for more details about the technical specifications: 
 * [technical_sepcifications]( /specificationsTechniques_maquettes/DW-P3-Brief-creatif-Ohmyfood!.pdf)
-
+and mockups of this project :
 * [mockup_Acceuil]( specificationsTechniques_maquettes/Accueil.png)
 * [mockup_ALaFrançaise]( specificationsTechniques_maquettes/Menu-Alafrancaise.png)
 * [mockup_LaNoteEnchantée]( specificationsTechniques_maquettes/Menu-lanoteenchantee.png)
