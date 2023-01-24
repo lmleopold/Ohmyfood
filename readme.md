@@ -16,6 +16,7 @@ The code had to be made of pure HTML5 and CSS3 without any framework (bootstrap,
 
 Checkout here for more details about the technical specifications and mockups of this project : 
 * [technical_sepcifications]( /specificationsTechniques_maquettes/DW-P3-Brief-creatif-Ohmyfood!.pdf)
+
 * [mockup_Acceuil]( specificationsTechniques_maquettes/Accueil.png)
 * [mockup_ALaFrançaise]( specificationsTechniques_maquettes/Menu-Alafrancaise.png)
 * [mockup_LaNoteEnchantée]( specificationsTechniques_maquettes/Menu-lanoteenchantee.png)
@@ -31,4 +32,5 @@ A list of technologies used within the project:
 * ![HTML5]( https://developer.mozilla.org/fr/docs/Glossary/HTML5) 
 * ![CSS3]( https://developer.mozilla.org/fr/docs/Web/CSS)
 * ![SASS]( https://sass-lang.com/guide)
+
 Prohibited: JavaScript, CSS online
