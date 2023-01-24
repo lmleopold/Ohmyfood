@@ -14,6 +14,7 @@ The main goal of this project website is to master Scss and BEM, as well as CSS 
 
 Checkout here for more details about the technical specifications: 
 * [technical_sepcifications]( /specificationsTechniques_maquettes/DW-P3-Brief-creatif-Ohmyfood!.pdf)
+
 and mockups of this project :
 * [mockup_Acceuil]( specificationsTechniques_maquettes/Accueil.png)
 * [mockup_ALaFrançaise]( specificationsTechniques_maquettes/Menu-Alafrancaise.png)
